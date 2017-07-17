@@ -172,27 +172,26 @@
   </entry>
   
   <entry>
-    <title>[python每日一练]--0000:图片添加数字</title>
-    <link href="https://wjsaya.github.io/2017/06/16/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0000/"/>
-    <id>https://wjsaya.github.io/2017/06/16/python每日一练/0000/</id>
-    <published>2017-06-15T16:00:00.000Z</published>
-    <updated>2017-06-30T12:16:55.000Z</updated>
+    <title>[python每日一练]--0004:统计文档内的单词个数</title>
+    <link href="https://wjsaya.github.io/2017/06/19/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0004/"/>
+    <id>https://wjsaya.github.io/2017/06/19/python每日一练/0004/</id>
+    <published>2017-06-18T16:00:00.000Z</published>
+    <updated>2017-07-17T01:29:02.859Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0000 题：</strong>将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果<br><img src="https://camo.githubusercontent.com/d518d3929e4054ce2f9183b23e52908da7e5632d/687474703a2f2f692e696d6775722e636f6d2f736732646b75592e706e673f31" alt="这里写图片描述"></p>
+<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0004 题：</strong>任一个英文的纯文本文件，统计其中的单词出现的个数。</p>
 </blockquote>
 <hr>
 <p>思路：</p>
 <ol>
-<li>PIL的Image.open打开图片。</li>
-<li>获取图片大小。</li>
-<li>调用ImageDraw，在图拍呢的指定位置写下数字。</li>
+<li>打开文件</li>
+<li>利用re模块的findall方法返回为数组的特性，匹配单个单词</li>
+<li>统计findall方法返回的数组长度即可。</li>
 </ol>
 <hr>
 <p>代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">#coding: utf-8</div><div class="line">#Auther: wjsaya</div><div class="line">#**第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果</div><div class="line">from PIL import Image,ImageFont,ImageDraw</div><div class="line">def main():</div><div class="line">    image = Image.open(&apos;./cat.jpg&apos;)</div><div class="line">    #打开原图</div><div class="line"></div><div class="line">    wight, hight = image.size</div><div class="line">    text = &quot;233&quot;</div><div class="line">    color = (255,0,0)</div><div class="line">    fontsize = wight//8</div><div class="line">    font = ImageFont.truetype(&quot;/usr/share/fonts/wps-office/arial.ttf&quot;,fontsize)</div><div class="line">    #设定参数</div><div class="line"></div><div class="line">    draw = ImageDraw.Draw(image)</div><div class="line">    draw.text((fontsize*6,0), text, color, font)</div><div class="line">    image.save(&apos;./c.jpg&apos;, &apos;jpeg&apos;)</div><div class="line">    #保存图片</div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    main()</div></pre></td></tr></table></figure>
-<p>原图：<br><img src="http://img.blog.csdn.net/20170616170044605?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="原图"></p>
-<p>添加后：<br><img src="http://img.blog.csdn.net/20170616170123575?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="添加后"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#coding: utf-8</div><div class="line">#Auther: wjsaya</div><div class="line">#**第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。</div><div class="line">import re</div><div class="line"></div><div class="line">def file_open(filename):</div><div class="line">    f = open(filename, &apos;r&apos;).read()</div><div class="line">    #打开文件</div><div class="line">    ff = re.findall(&apos;([a-zA-Z0-9]+)&apos;, f)</div><div class="line">    #正则匹配，组内为大小写字母加数字，后面限定位数为一位以上</div><div class="line">    print (ff)</div><div class="line">    print (len(ff))</div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    file = input(&quot;将要统计的文件为:&quot;)</div><div class="line">    file_open(file)</div><div class="line"></div><div class="line"></div><div class="line">根据re模块的findall查找大小写字母加数字，且为1位以上的字符串。因为fingall返回的为数组，因此直接len即可得出个数。</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170619152836527?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="运行截图"></p>
 ]]></content>
     
     <summary type="html">
@@ -239,26 +238,27 @@
   </entry>
   
   <entry>
-    <title>[python每日一练]--0004:统计文档内的单词个数</title>
-    <link href="https://wjsaya.github.io/2011/06/19/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0004/"/>
-    <id>https://wjsaya.github.io/2011/06/19/python每日一练/0004/</id>
-    <published>2011-06-18T16:00:00.000Z</published>
-    <updated>2017-06-30T12:17:48.000Z</updated>
+    <title>[python每日一练]--0000:图片添加数字</title>
+    <link href="https://wjsaya.github.io/2017/06/16/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0000/"/>
+    <id>https://wjsaya.github.io/2017/06/16/python每日一练/0000/</id>
+    <published>2017-06-15T16:00:00.000Z</published>
+    <updated>2017-06-30T12:16:55.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0004 题：</strong>任一个英文的纯文本文件，统计其中的单词出现的个数。</p>
+<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0000 题：</strong>将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果<br><img src="https://camo.githubusercontent.com/d518d3929e4054ce2f9183b23e52908da7e5632d/687474703a2f2f692e696d6775722e636f6d2f736732646b75592e706e673f31" alt="这里写图片描述"></p>
 </blockquote>
 <hr>
 <p>思路：</p>
 <ol>
-<li>打开文件</li>
-<li>利用re模块的findall方法返回为数组的特性，匹配单个单词</li>
-<li>统计findall方法返回的数组长度即可。</li>
+<li>PIL的Image.open打开图片。</li>
+<li>获取图片大小。</li>
+<li>调用ImageDraw，在图拍呢的指定位置写下数字。</li>
 </ol>
 <hr>
 <p>代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#coding: utf-8</div><div class="line">#Auther: wjsaya</div><div class="line">#**第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。</div><div class="line">import re</div><div class="line"></div><div class="line">def file_open(filename):</div><div class="line">    f = open(filename, &apos;r&apos;).read()</div><div class="line">    #打开文件</div><div class="line">    ff = re.findall(&apos;([a-zA-Z0-9]+)&apos;, f)</div><div class="line">    #正则匹配，组内为大小写字母加数字，后面限定位数为一位以上</div><div class="line">    print (ff)</div><div class="line">    print (len(ff))</div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    file = input(&quot;将要统计的文件为:&quot;)</div><div class="line">    file_open(file)</div><div class="line"></div><div class="line"></div><div class="line">根据re模块的findall查找大小写字母加数字，且为1位以上的字符串。因为fingall返回的为数组，因此直接len即可得出个数。</div></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170619152836527?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="运行截图"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">#coding: utf-8</div><div class="line">#Auther: wjsaya</div><div class="line">#**第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果</div><div class="line">from PIL import Image,ImageFont,ImageDraw</div><div class="line">def main():</div><div class="line">    image = Image.open(&apos;./cat.jpg&apos;)</div><div class="line">    #打开原图</div><div class="line"></div><div class="line">    wight, hight = image.size</div><div class="line">    text = &quot;233&quot;</div><div class="line">    color = (255,0,0)</div><div class="line">    fontsize = wight//8</div><div class="line">    font = ImageFont.truetype(&quot;/usr/share/fonts/wps-office/arial.ttf&quot;,fontsize)</div><div class="line">    #设定参数</div><div class="line"></div><div class="line">    draw = ImageDraw.Draw(image)</div><div class="line">    draw.text((fontsize*6,0), text, color, font)</div><div class="line">    image.save(&apos;./c.jpg&apos;, &apos;jpeg&apos;)</div><div class="line">    #保存图片</div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<p>原图：<br><img src="http://img.blog.csdn.net/20170616170044605?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="原图"></p>
+<p>添加后：<br><img src="http://img.blog.csdn.net/20170616170123575?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="添加后"></p>
 ]]></content>
     
     <summary type="html">
