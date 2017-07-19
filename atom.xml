@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wjsaya.github.io/"/>
-  <updated>2017-07-14T07:57:20.746Z</updated>
+  <updated>2017-07-19T09:09:48.086Z</updated>
   <id>https://wjsaya.github.io/</id>
   
   <author>
@@ -16,9 +16,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[python每日一练]--0007:代码统计</title>
+    <link href="https://wjsaya.github.io/2017/07/19/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0007/"/>
+    <id>https://wjsaya.github.io/2017/07/19/python每日一练/0007/</id>
+    <published>2017-07-18T16:00:00.000Z</published>
+    <updated>2017-07-19T09:09:48.086Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br>个人博客地址：<a href="https://wjsaya.github.io">https://wjsaya.github.io</a><br><strong>第 0007 题：</strong>有个目录，里面是你自己写过的程序，统计一下你写过多少行代码。包括空行和注释，但是要分别列出来。</p>
+</blockquote>
+<hr>
+<p>思路：</p>
+<ol>
+<li>列出目录下所有py文件；</li>
+<li>依次逐行读取py文件；</li>
+<li>循环加判断，根据结果来更改数组的值，数组里就是统计结果。</li>
+</ol>
+<hr>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python3</div><div class="line">#coding: utf-8</div><div class="line">#Auther: wjsaya</div><div class="line">#**第 0007 题：**有个目录，里面是你自己写过的程序，统计一下你写过多少行代码。包括空行和注释，但是要分别列出来。</div><div class="line">import os</div><div class="line">import re</div><div class="line"></div><div class="line">def file_list(dir):</div><div class="line">    os.chdir(dir)</div><div class="line">    F_list = [ F for F in os.listdir(&quot;./&quot;) if os.path.splitext(F)[1]==&quot;.py&quot;]</div><div class="line">    for name in F_list:</div><div class="line">        result = word_count(name)</div><div class="line">        print (name+&quot;中，注释为&quot;+str(result[0])+&quot;行，空行为&quot;+str(result[1])+&quot;行，有效代码行数为&quot;+str(result[2]))</div><div class="line"></div><div class="line">def word_count(name):</div><div class="line">    count = [0, 0, 0]</div><div class="line">    #第一个为注释，第二个为空格，第三个为代码</div><div class="line">    file = open(name, &apos;r&apos;, encoding=&quot;utf-8&quot;).readlines()</div><div class="line">    for line in file:</div><div class="line">        if re.match(r&apos;[ ]*#&apos;, line):</div><div class="line">            count[0] += 1</div><div class="line">        elif re.match(r&apos;$&apos;, line):</div><div class="line">                count[1] += 1</div><div class="line">        else:</div><div class="line">            count[2] += 1</div><div class="line">    return count</div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;: </div><div class="line">    #dir = input(&quot;输入代码目录:&quot;)</div><div class="line">    dir = &quot;code&quot;</div><div class="line">    file_list(dir)</div></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://img.blog.csdn.net/20170719170508466?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<hr>
+<p>ps：懒癌发作的日常。。。离上一篇已经过去了10天233，慢慢来，不着急。。。<br>另外，我的个人博客是托管在最大的交友网站，不是，是最大的代码托管平台github上的，所以访问可能会有点慢ԅ(¯㉨¯ԅ)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-M
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>windows 发布文章测试</title>
     <link href="https://wjsaya.github.io/2017/07/14/windows/"/>
     <id>https://wjsaya.github.io/2017/07/14/windows/</id>
+    <published>2017-07-13T16:00:00.000Z</published>
+    <updated>2017-07-14T07:57:20.746Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://wjsaya.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="windows" scheme="https://wjsaya.github.io/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows 发布文章测试</title>
+    <link href="https://wjsaya.github.io/2017/07/14/test/"/>
+    <id>https://wjsaya.github.io/2017/07/14/test/</id>
     <published>2017-07-13T16:00:00.000Z</published>
     <updated>2017-07-14T07:57:20.746Z</updated>
     
@@ -205,6 +261,39 @@
   </entry>
   
   <entry>
+    <title>[python每日一练]--0001:生成激活码</title>
+    <link href="https://wjsaya.github.io/2017/06/16/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0001/"/>
+    <id>https://wjsaya.github.io/2017/06/16/python每日一练/0001/</id>
+    <published>2017-06-15T16:00:00.000Z</published>
+    <updated>2017-06-30T12:17:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br>第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？</p>
+</blockquote>
+<hr>
+<p>思路：</p>
+<ol>
+<li>循环，在count条件内调用length的循环来生成key。</li>
+<li>内循环，length条件下随机生成一个字符并追加到code变量。</li>
+<li>得到一个key之后，保存到文件</li>
+</ol>
+<hr>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">#coding: utf-8</div><div class="line">#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）</div><div class="line">#Auther: wjsaya</div><div class="line">from random import choice</div><div class="line">import string</div><div class="line">import os</div><div class="line"></div><div class="line">def main():</div><div class="line">    if os.path.exists(&quot;./activecode.code&quot;):</div><div class="line">        print (&quot;已经存在activecode.code文件，已经删除&quot;)</div><div class="line">        os.remove(&quot;./activecode.code&quot;)</div><div class="line"></div><div class="line">    dict = string.ascii_letters[:]</div><div class="line">    #设定字典为&apos;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&apos;</div><div class="line">    count = input(&quot;请输入激活码个数：&quot;)</div><div class="line">    if count == &quot;&quot;:</div><div class="line">        count = &quot;1&quot;</div><div class="line">    </div><div class="line">    length = input(&quot;请输入激活码长度：&quot;)</div><div class="line">    if length == &quot;&quot;:</div><div class="line">        length = &quot;8&quot;</div><div class="line">   </div><div class="line">    for i in range(0,int(count)):</div><div class="line">        code = get_code(dict, length)</div><div class="line">        with open (&apos;activecode.code&apos;, &apos;a+&apos;) as f:</div><div class="line">            f.write(code+&apos;\n&apos;)</div><div class="line">    #通过count限制激活码个数，循环调用get_code来计算激活码 </div><div class="line"></div><div class="line">def get_code(dict, length):</div><div class="line">    #根据给定字典，长度来得出激活码</div><div class="line">    code = &quot;&quot;</div><div class="line">    for i in range(0,int(length)):</div><div class="line">        code = code+str(choice(dict))</div><div class="line">    return code</div><div class="line"> </div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<p>效果图：<br><img src="http://img.blog.csdn.net/20170616174126974?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="效果图"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-M
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>[python每日一练]--0000:图片添加数字</title>
     <link href="https://wjsaya.github.io/2017/06/16/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0000/"/>
     <id>https://wjsaya.github.io/2017/06/16/python每日一练/0000/</id>
@@ -226,39 +315,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">#coding: utf-8</div><div class="line">#Auther: wjsaya</div><div class="line">#**第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果</div><div class="line">from PIL import Image,ImageFont,ImageDraw</div><div class="line">def main():</div><div class="line">    image = Image.open(&apos;./cat.jpg&apos;)</div><div class="line">    #打开原图</div><div class="line"></div><div class="line">    wight, hight = image.size</div><div class="line">    text = &quot;233&quot;</div><div class="line">    color = (255,0,0)</div><div class="line">    fontsize = wight//8</div><div class="line">    font = ImageFont.truetype(&quot;/usr/share/fonts/wps-office/arial.ttf&quot;,fontsize)</div><div class="line">    #设定参数</div><div class="line"></div><div class="line">    draw = ImageDraw.Draw(image)</div><div class="line">    draw.text((fontsize*6,0), text, color, font)</div><div class="line">    image.save(&apos;./c.jpg&apos;, &apos;jpeg&apos;)</div><div class="line">    #保存图片</div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    main()</div></pre></td></tr></table></figure>
 <p>原图：<br><img src="http://img.blog.csdn.net/20170616170044605?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="原图"></p>
 <p>添加后：<br><img src="http://img.blog.csdn.net/20170616170123575?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="添加后"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-M
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[python每日一练]--0001:生成激活码</title>
-    <link href="https://wjsaya.github.io/2017/06/16/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0001/"/>
-    <id>https://wjsaya.github.io/2017/06/16/python每日一练/0001/</id>
-    <published>2017-06-15T16:00:00.000Z</published>
-    <updated>2017-06-30T12:17:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br>第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？</p>
-</blockquote>
-<hr>
-<p>思路：</p>
-<ol>
-<li>循环，在count条件内调用length的循环来生成key。</li>
-<li>内循环，length条件下随机生成一个字符并追加到code变量。</li>
-<li>得到一个key之后，保存到文件</li>
-</ol>
-<hr>
-<p>代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">#coding: utf-8</div><div class="line">#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）</div><div class="line">#Auther: wjsaya</div><div class="line">from random import choice</div><div class="line">import string</div><div class="line">import os</div><div class="line"></div><div class="line">def main():</div><div class="line">    if os.path.exists(&quot;./activecode.code&quot;):</div><div class="line">        print (&quot;已经存在activecode.code文件，已经删除&quot;)</div><div class="line">        os.remove(&quot;./activecode.code&quot;)</div><div class="line"></div><div class="line">    dict = string.ascii_letters[:]</div><div class="line">    #设定字典为&apos;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&apos;</div><div class="line">    count = input(&quot;请输入激活码个数：&quot;)</div><div class="line">    if count == &quot;&quot;:</div><div class="line">        count = &quot;1&quot;</div><div class="line">    </div><div class="line">    length = input(&quot;请输入激活码长度：&quot;)</div><div class="line">    if length == &quot;&quot;:</div><div class="line">        length = &quot;8&quot;</div><div class="line">   </div><div class="line">    for i in range(0,int(count)):</div><div class="line">        code = get_code(dict, length)</div><div class="line">        with open (&apos;activecode.code&apos;, &apos;a+&apos;) as f:</div><div class="line">            f.write(code+&apos;\n&apos;)</div><div class="line">    #通过count限制激活码个数，循环调用get_code来计算激活码 </div><div class="line"></div><div class="line">def get_code(dict, length):</div><div class="line">    #根据给定字典，长度来得出激活码</div><div class="line">    code = &quot;&quot;</div><div class="line">    for i in range(0,int(length)):</div><div class="line">        code = code+str(choice(dict))</div><div class="line">    return code</div><div class="line"> </div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    main()</div></pre></td></tr></table></figure>
-<p>效果图：<br><img src="http://img.blog.csdn.net/20170616174126974?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="效果图"></p>
 ]]></content>
     
     <summary type="html">
