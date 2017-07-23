@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="python,爬虫," />
 
 
 
@@ -95,19 +95,19 @@
 
 
 
-<meta name="description" content="题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0004 题：任一个英文的纯文本文件，统计其中的单词出现的个数。">
-<meta name="keywords" content="python">
+<meta name="description" content="最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/本次内容:通过有道词典的接口写一个命令行的翻译工具。">
+<meta name="keywords" content="python,爬虫">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[python每日一练]--0004:统计文档内的单词个数">
-<meta property="og:url" content="https://wjsaya.github.io/python每日一练/0004.html">
+<meta property="og:title" content="[python爬虫]--调用有道词典进行翻译">
+<meta property="og:url" content="https://wjsaya.github.io/爬虫/youdao1.html">
 <meta property="og:site_name" content="wjsaya的窝棚">
-<meta property="og:description" content="题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0004 题：任一个英文的纯文本文件，统计其中的单词出现的个数。">
-<meta property="og:image" content="http://img.blog.csdn.net/20170619152836527?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-07-23T14:30:03.371Z">
+<meta property="og:description" content="最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/本次内容:通过有道词典的接口写一个命令行的翻译工具。">
+<meta property="og:image" content="http://img.blog.csdn.net/20170614162941824?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-07-23T14:53:08.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[python每日一练]--0004:统计文档内的单词个数">
-<meta name="twitter:description" content="题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0004 题：任一个英文的纯文本文件，统计其中的单词出现的个数。">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20170619152836527?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="[python爬虫]--调用有道词典进行翻译">
+<meta name="twitter:description" content="最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/本次内容:通过有道词典的接口写一个命令行的翻译工具。">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170614162941824?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
 
@@ -135,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://wjsaya.github.io/python每日一练/0004.html"/>
+  <link rel="canonical" href="https://wjsaya.github.io/爬虫/youdao1.html"/>
 
 
 
 
 
-  <title>[python每日一练]--0004:统计文档内的单词个数 | wjsaya的窝棚</title>
+  <title>[python爬虫]--调用有道词典进行翻译 | wjsaya的窝棚</title>
   
 
 
@@ -280,7 +280,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://wjsaya.github.io/python每日一练/0004.html">
+    <link itemprop="mainEntityOfPage" href="https://wjsaya.github.io/爬虫/youdao1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjsaya">
@@ -297,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[python每日一练]--0004:统计文档内的单词个数</h1>
+          <h1 class="post-title" itemprop="name headline">[python爬虫]--调用有道词典进行翻译</h1>
         
 
         <div class="post-meta">
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T00:00:00+08:00">
-                06-19-2017
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-14T00:00:00+08:00">
+                06-14-2017
               </time>
             
 
@@ -345,17 +345,17 @@
 
       
         <blockquote>
-<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0004 题：</strong>任一个英文的纯文本文件，统计其中的单词出现的个数。<br><a id="more"></a></p>
+<p>最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。<br>github地址：<a href="https://github.com/wjsaya/python_spider_learn/" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/</a><br>本次内容:通过有道词典的接口写一个命令行的翻译工具。<br><a id="more"></a></p>
 </blockquote>
 <hr>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li>打开文件</li>
-<li>利用re模块的findall方法返回为数组的特性，匹配单个单词</li>
-<li>统计findall方法返回的数组长度即可。</li>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><ol>
+<li>获取用户输入。</li>
+<li>通过值构造请求header。</li>
+<li>向有道翻译的对应接口发送headers，然后获取返回并取出结果并输出。</li>
 </ol>
 <hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="comment">#**第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。</span></div><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">file_open</span><span class="params">(filename)</span>:</span></div><div class="line">    f = open(filename, <span class="string">'r'</span>).read()</div><div class="line">    <span class="comment">#打开文件</span></div><div class="line">    ff = re.findall(<span class="string">'([a-zA-Z0-9]+)'</span>, f)</div><div class="line">    <span class="comment">#正则匹配，组内为大小写字母加数字，后面限定位数为一位以上</span></div><div class="line">    <span class="keyword">print</span> (ff)</div><div class="line">    <span class="keyword">print</span> (len(ff))</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    file = input(<span class="string">"将要统计的文件为:"</span>)</div><div class="line">    file_open(file)</div><div class="line"></div><div class="line"></div><div class="line">根据re模块的findall查找大小写字母加数字，且为<span class="number">1</span>位以上的字符串。因为fingall返回的为数组，因此直接len即可得出个数。</div></pre></td></tr></table></figure>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="http://img.blog.csdn.net/20170619152836527?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="运行截图"></p>
+<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#调用有道词典的web接口进行翻译</span></div><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> json</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span><span class="params">(word=None)</span>:</span></div><div class="line">    url = <span class="string">'http://fanyi.youdao.com/translate?smartresult=dict&amp;smartresult=rule&amp;smartresult=ugc&amp;sessionFrom=null'</span></div><div class="line">    key=&#123;</div><div class="line">    <span class="string">'type'</span>:<span class="string">"AUTO"</span>,</div><div class="line">    <span class="string">'i'</span>:word,</div><div class="line">    <span class="string">"doctype"</span>:<span class="string">"json"</span>,</div><div class="line">    <span class="string">"version"</span>:<span class="string">"2.1"</span>,</div><div class="line">    <span class="string">"keyfrom"</span>:<span class="string">"fanyi.web"</span>,</div><div class="line">    <span class="string">"ue"</span>:<span class="string">"UTF-8"</span>,</div><div class="line">    <span class="string">"action"</span>:<span class="string">"FY_BY_CLICKBUTTON"</span>,</div><div class="line">    <span class="string">"typoResult"</span>:<span class="string">"true"</span></div><div class="line">    &#125;  </div><div class="line">    <span class="comment">#key这个字典为发送给有道词典服务器的内容，里面的i就是我们需要翻译的内容。此处直接调用word变量。</span></div><div class="line">    response = requests.post(url,data=key)</div><div class="line">    <span class="keyword">return</span> result</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_result</span><span class="params">(li=None)</span>:</span></div><div class="line">    result = json.loads(li.text)</div><div class="line">    <span class="keyword">print</span> (<span class="string">"输入的词为：%s"</span> % l</div><div class="line">i[<span class="string">'translateResult'</span>][<span class="number">0</span>][<span class="number">0</span>][<span class="string">'src'</span>])</div><div class="line">    <span class="keyword">print</span> (<span class="string">"翻译结果为：%s"</span> % li[<span class="string">'translateResult'</span>][<span class="number">0</span>][<span class="number">0</span>][<span class="string">'tgt'</span>])</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>:</span></div><div class="line">	    <span class="keyword">print</span> (<span class="string">"本程序调用有道词典的API进行翻译，可达到以下效果："</span>)</div><div class="line">	    <span class="keyword">print</span> (<span class="string">"外文--&gt;中文"</span>)</div><div class="line">	    <span class="keyword">print</span> (<span class="string">"中文--&gt;英文"</span>)</div><div class="line">	    word = input(<span class="string">'请输入你想要翻译的词或句：'</span>)</div><div class="line">	    list_trans = translate(word)</div><div class="line">	    get=get_result(list_trans)</div><div class="line">	</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">	main()</div></pre></td></tr></table></figure>
+<h2 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h2><p><img src="http://img.blog.csdn.net/20170614162941824?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="运行结果截图"></p>
 
       
     </div>
@@ -387,6 +387,8 @@
           
             <a href="/tags/python/" rel="tag"># python</a>
           
+            <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
+          
         </div>
       
 
@@ -398,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/python每日一练/0001.html" rel="next" title="[python每日一练]--0001:生成激活码">
-                <i class="fa fa-chevron-left"></i> [python每日一练]--0001:生成激活码
+              <a href="/爬虫/jiandan.html" rel="next" title="[python爬虫]--从煎蛋网下载图片">
+                <i class="fa fa-chevron-left"></i> [python爬虫]--从煎蛋网下载图片
               </a>
             
           </div>
@@ -408,8 +410,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/python每日一练/0002.html" rel="prev" title="[python每日一练]--0002:生成激活码并存储到mysql数据库">
-                [python每日一练]--0002:生成激活码并存储到mysql数据库 <i class="fa fa-chevron-right"></i>
+              <a href="/爬虫/douban_music.html" rel="prev" title="[python爬虫]--爬取豆瓣音乐topX">
+                [python爬虫]--爬取豆瓣音乐topX <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -538,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果图"><span class="nav-number">3.</span> <span class="nav-text">效果图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路："><span class="nav-number">1.</span> <span class="nav-text">思路：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码："><span class="nav-number">2.</span> <span class="nav-text">代码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果图："><span class="nav-number">3.</span> <span class="nav-text">效果图：</span></a></li></ol></div>
             
 
           </div>

@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="wjsaya的窝棚">
 <meta property="og:description" content="题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使">
 <meta property="og:image" content="http://img.blog.csdn.net/20170616174126974?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-07-19T09:39:20.385Z">
+<meta property="og:updated_time" content="2017-07-23T14:30:18.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[python每日一练]--0001:生成激活码">
 <meta name="twitter:description" content="题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使">
@@ -355,7 +355,7 @@
 <li>得到一个key之后，保存到文件</li>
 </ol>
 <hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">#coding: utf-8</div><div class="line">#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）</div><div class="line">#Auther: wjsaya</div><div class="line">from random import choice</div><div class="line">import string</div><div class="line">import os</div><div class="line"></div><div class="line">def main():</div><div class="line">    if os.path.exists(&quot;./activecode.code&quot;):</div><div class="line">        print (&quot;已经存在activecode.code文件，已经删除&quot;)</div><div class="line">        os.remove(&quot;./activecode.code&quot;)</div><div class="line"></div><div class="line">    dict = string.ascii_letters[:]</div><div class="line">    #设定字典为&apos;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&apos;</div><div class="line">    count = input(&quot;请输入激活码个数：&quot;)</div><div class="line">    if count == &quot;&quot;:</div><div class="line">        count = &quot;1&quot;</div><div class="line">    </div><div class="line">    length = input(&quot;请输入激活码长度：&quot;)</div><div class="line">    if length == &quot;&quot;:</div><div class="line">        length = &quot;8&quot;</div><div class="line">   </div><div class="line">    for i in range(0,int(count)):</div><div class="line">        code = get_code(dict, length)</div><div class="line">        with open (&apos;activecode.code&apos;, &apos;a+&apos;) as f:</div><div class="line">            f.write(code+&apos;\n&apos;)</div><div class="line">    #通过count限制激活码个数，循环调用get_code来计算激活码 </div><div class="line"></div><div class="line">def get_code(dict, length):</div><div class="line">    #根据给定字典，长度来得出激活码</div><div class="line">    code = &quot;&quot;</div><div class="line">    for i in range(0,int(length)):</div><div class="line">        code = code+str(choice(dict))</div><div class="line">    return code</div><div class="line"> </div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="keyword">from</span> random <span class="keyword">import</span> choice</div><div class="line"><span class="keyword">import</span> string</div><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">if</span> os.path.exists(<span class="string">"./activecode.code"</span>):</div><div class="line">        <span class="keyword">print</span> (<span class="string">"已经存在activecode.code文件，已经删除"</span>)</div><div class="line">        os.remove(<span class="string">"./activecode.code"</span>)</div><div class="line"></div><div class="line">    dict = string.ascii_letters[:]</div><div class="line">    <span class="comment">#设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></div><div class="line">    count = input(<span class="string">"请输入激活码个数："</span>)</div><div class="line">    <span class="keyword">if</span> count == <span class="string">""</span>:</div><div class="line">        count = <span class="string">"1"</span></div><div class="line">    </div><div class="line">    length = input(<span class="string">"请输入激活码长度："</span>)</div><div class="line">    <span class="keyword">if</span> length == <span class="string">""</span>:</div><div class="line">        length = <span class="string">"8"</span></div><div class="line">   </div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,int(count)):</div><div class="line">        code = get_code(dict, length)</div><div class="line">        <span class="keyword">with</span> open (<span class="string">'activecode.code'</span>, <span class="string">'a+'</span>) <span class="keyword">as</span> f:</div><div class="line">            f.write(code+<span class="string">'\n'</span>)</div><div class="line">    <span class="comment">#通过count限制激活码个数，循环调用get_code来计算激活码 </span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_code</span><span class="params">(dict, length)</span>:</span></div><div class="line">    <span class="comment">#根据给定字典，长度来得出激活码</span></div><div class="line">    code = <span class="string">""</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,int(length)):</div><div class="line">        code = code+str(choice(dict))</div><div class="line">    <span class="keyword">return</span> code</div><div class="line"> </div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
 <h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="http://img.blog.csdn.net/20170616174126974?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="效果图"></p>
 
       
@@ -399,14 +399,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/python每日一练/0000.html" rel="next" title="[python每日一练]--0000:图片添加数字">
+                <i class="fa fa-chevron-left"></i> [python每日一练]--0000:图片添加数字
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/python每日一练/0000.html" rel="prev" title="[python每日一练]--0000:图片添加数字">
-                [python每日一练]--0000:图片添加数字 <i class="fa fa-chevron-right"></i>
+              <a href="/python每日一练/0004.html" rel="prev" title="[python每日一练]--0004:统计文档内的单词个数">
+                [python每日一练]--0004:统计文档内的单词个数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -480,7 +484,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -493,7 +497,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -105,7 +105,7 @@
 <meta property="og:image" content="https://camo.githubusercontent.com/d518d3929e4054ce2f9183b23e52908da7e5632d/687474703a2f2f692e696d6775722e636f6d2f736732646b75592e706e673f31">
 <meta property="og:image" content="http://img.blog.csdn.net/20170616170044605?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170616170123575?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-07-19T09:39:21.981Z">
+<meta property="og:updated_time" content="2017-07-23T14:29:46.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[python每日一练]--0000:图片添加数字">
 <meta name="twitter:description" content="题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0000 题：将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中">
@@ -357,7 +357,7 @@
 <li>调用ImageDraw，在图拍呢的指定位置写下数字。</li>
 </ol>
 <hr>
-<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">#coding: utf-8</div><div class="line">#Auther: wjsaya</div><div class="line">#**第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果</div><div class="line">from PIL import Image,ImageFont,ImageDraw</div><div class="line">def main():</div><div class="line">    image = Image.open(&apos;./cat.jpg&apos;)</div><div class="line">    #打开原图</div><div class="line"></div><div class="line">    wight, hight = image.size</div><div class="line">    text = &quot;233&quot;</div><div class="line">    color = (255,0,0)</div><div class="line">    fontsize = wight//8</div><div class="line">    font = ImageFont.truetype(&quot;/usr/share/fonts/wps-office/arial.ttf&quot;,fontsize)</div><div class="line">    #设定参数</div><div class="line"></div><div class="line">    draw = ImageDraw.Draw(image)</div><div class="line">    draw.text((fontsize*6,0), text, color, font)</div><div class="line">    image.save(&apos;./c.jpg&apos;, &apos;jpeg&apos;)</div><div class="line">    #保存图片</div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="comment">#**第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果</span></div><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image,ImageFont,ImageDraw</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">    image = Image.open(<span class="string">'./cat.jpg'</span>)</div><div class="line">    <span class="comment">#打开原图</span></div><div class="line"></div><div class="line">    wight, hight = image.size</div><div class="line">    text = <span class="string">"233"</span></div><div class="line">    color = (<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>)</div><div class="line">    fontsize = wight//<span class="number">8</span></div><div class="line">    font = ImageFont.truetype(<span class="string">"/usr/share/fonts/wps-office/arial.ttf"</span>,fontsize)</div><div class="line">    <span class="comment">#设定参数</span></div><div class="line"></div><div class="line">    draw = ImageDraw.Draw(image)</div><div class="line">    draw.text((fontsize*<span class="number">6</span>,<span class="number">0</span>), text, color, font)</div><div class="line">    image.save(<span class="string">'./c.jpg'</span>, <span class="string">'jpeg'</span>)</div><div class="line">    <span class="comment">#保存图片</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
 <h2 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h2><p>原图：<br><img src="http://img.blog.csdn.net/20170616170044605?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="原图"></p>
 <p>添加后：<br><img src="http://img.blog.csdn.net/20170616170123575?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="添加后"></p>
 
@@ -402,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/python每日一练/0001.html" rel="next" title="[python每日一练]--0001:生成激活码">
-                <i class="fa fa-chevron-left"></i> [python每日一练]--0001:生成激活码
+              <a href="/爬虫/douban_music.html" rel="next" title="[python爬虫]--爬取豆瓣音乐topX">
+                <i class="fa fa-chevron-left"></i> [python爬虫]--爬取豆瓣音乐topX
               </a>
             
           </div>
@@ -412,8 +412,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/python每日一练/0004.html" rel="prev" title="[python每日一练]--0004:统计文档内的单词个数">
-                [python每日一练]--0004:统计文档内的单词个数 <i class="fa fa-chevron-right"></i>
+              <a href="/python每日一练/0001.html" rel="prev" title="[python每日一练]--0001:生成激活码">
+                [python每日一练]--0001:生成激活码 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -487,7 +487,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -500,7 +500,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
