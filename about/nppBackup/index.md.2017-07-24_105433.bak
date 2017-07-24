@@ -1,0 +1,35 @@
+---
+title: 关于我
+type: "about"
+date: 2017-07-24 10:36:15
+categories:
+tags:
+comments: false
+---
+
+-------------------------
+Overview
+--
+>95年计科男
+路由交换、服务器、信安、综合布线要啥啥会，可惜都浅尝辄止
+接下来的两年希望能够找到一个点再深入学习
+
+Content
+--
+Email: sayawj@163.com
+
+
+Skills
+--
+
+<style>
+table th:first-of-type {
+    width: 100px;
+}
+</style>
+<!-- 下方是表格的 Markdown 语法 --!>
+what|how
+---|---
+linux运维|熟练操作
+sql语句|入门
+
