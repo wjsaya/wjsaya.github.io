@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wjsaya.github.io/"/>
-  <updated>2017-07-23T14:30:11.098Z</updated>
+  <updated>2017-07-26T06:51:52.928Z</updated>
   <id>https://wjsaya.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0007.html"/>
     <id>https://wjsaya.github.io/python每日一练/0007.html</id>
     <published>2017-07-18T16:00:00.000Z</published>
-    <updated>2017-07-23T14:30:11.098Z</updated>
+    <updated>2017-07-26T06:51:52.928Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br>个人博客地址：<a href="https://wjsaya.github.io">https://wjsaya.github.io</a><br><strong>第 0007 题：</strong>有个目录，里面是你自己写过的程序，统计一下你写过多少行代码。包括空行和注释，但是要分别列出来。</p>
@@ -46,8 +46,12 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
     
   </entry>
   
@@ -56,7 +60,7 @@
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0006.html"/>
     <id>https://wjsaya.github.io/python每日一练/0006.html</id>
     <published>2017-07-08T16:00:00.000Z</published>
-    <updated>2017-07-19T09:39:11.075Z</updated>
+    <updated>2017-07-26T06:51:50.164Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0006 题：</strong>你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。</p>
@@ -82,8 +86,12 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
     
   </entry>
   
@@ -92,7 +100,7 @@
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0003.html"/>
     <id>https://wjsaya.github.io/python每日一练/0003.html</id>
     <published>2017-06-20T16:00:00.000Z</published>
-    <updated>2017-07-23T14:30:16.062Z</updated>
+    <updated>2017-07-26T06:53:36.169Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0003 题：</strong>将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。</p>
@@ -118,8 +126,12 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
     
   </entry>
   
@@ -128,7 +140,7 @@
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0005.html"/>
     <id>https://wjsaya.github.io/python每日一练/0005.html</id>
     <published>2017-06-20T16:00:00.000Z</published>
-    <updated>2017-07-23T14:30:06.285Z</updated>
+    <updated>2017-07-26T06:51:46.531Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0005 题：</strong>你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。<br><a id="more"></a></p>
@@ -152,8 +164,12 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
     
   </entry>
   
@@ -162,7 +178,7 @@
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0002.html"/>
     <id>https://wjsaya.github.io/python每日一练/0002.html</id>
     <published>2017-06-18T16:00:00.000Z</published>
-    <updated>2017-07-23T14:30:13.711Z</updated>
+    <updated>2017-07-26T06:52:06.793Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0002 题：</strong>将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。</p>
@@ -188,8 +204,12 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
     
   </entry>
   
@@ -198,7 +218,7 @@
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0004.html"/>
     <id>https://wjsaya.github.io/python每日一练/0004.html</id>
     <published>2017-06-18T16:00:00.000Z</published>
-    <updated>2017-07-23T14:30:03.371Z</updated>
+    <updated>2017-07-26T06:51:51.621Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0004 题：</strong>任一个英文的纯文本文件，统计其中的单词出现的个数。<br><a id="more"></a></p>
@@ -221,8 +241,12 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
     
   </entry>
   
@@ -231,7 +255,7 @@
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0000.html"/>
     <id>https://wjsaya.github.io/python每日一练/0000.html</id>
     <published>2017-06-15T16:00:00.000Z</published>
-    <updated>2017-07-26T06:48:11.972Z</updated>
+    <updated>2017-07-26T06:51:42.862Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0000 题：</strong>将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果<br><img src="https://camo.githubusercontent.com/d518d3929e4054ce2f9183b23e52908da7e5632d/687474703a2f2f692e696d6775722e636f6d2f736732646b75592e706e673f31" alt="这里写图片描述"></p>
@@ -262,7 +286,7 @@
       <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
     
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
     
   </entry>
   
@@ -271,7 +295,7 @@
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0001.html"/>
     <id>https://wjsaya.github.io/python每日一练/0001.html</id>
     <published>2017-06-15T16:00:00.000Z</published>
-    <updated>2017-07-23T14:30:18.243Z</updated>
+    <updated>2017-07-26T06:51:36.437Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0001 题：</strong>做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？</p>
@@ -296,8 +320,12 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
     
   </entry>
   
@@ -306,7 +334,7 @@
     <link href="https://wjsaya.github.io/%E7%88%AC%E8%99%AB/douban_music.html"/>
     <id>https://wjsaya.github.io/爬虫/douban_music.html</id>
     <published>2017-06-14T16:00:00.000Z</published>
-    <updated>2017-07-23T14:51:30.127Z</updated>
+    <updated>2017-07-26T06:51:30.190Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。<br>github地址：<a href="https://github.com/wjsaya/python_spider_learn/" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/</a><br>本次内容：从煎蛋网下载图片<br><a id="more"></a></p>
@@ -329,10 +357,12 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
     
-      <category term="爬虫" scheme="https://wjsaya.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="py爬虫" scheme="https://wjsaya.github.io/tags/py%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
@@ -341,7 +371,7 @@
     <link href="https://wjsaya.github.io/%E7%88%AC%E8%99%AB/jiandan.html"/>
     <id>https://wjsaya.github.io/爬虫/jiandan.html</id>
     <published>2017-06-13T16:00:00.000Z</published>
-    <updated>2017-07-23T14:47:44.441Z</updated>
+    <updated>2017-07-26T06:51:25.910Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。<br>github地址：<a href="https://github.com/wjsaya/python_spider_learn/" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/</a><br>本次内容：从煎蛋网下载图片<br><a id="more"></a></p>
@@ -361,10 +391,12 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
     
-      <category term="爬虫" scheme="https://wjsaya.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="py爬虫" scheme="https://wjsaya.github.io/tags/py%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
@@ -373,7 +405,7 @@
     <link href="https://wjsaya.github.io/%E7%88%AC%E8%99%AB/youdao1.html"/>
     <id>https://wjsaya.github.io/爬虫/youdao1.html</id>
     <published>2017-06-13T16:00:00.000Z</published>
-    <updated>2017-07-23T14:53:08.940Z</updated>
+    <updated>2017-07-26T06:51:21.218Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。<br>github地址：<a href="https://github.com/wjsaya/python_spider_learn/" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/</a><br>本次内容:通过有道词典的接口写一个命令行的翻译工具。<br><a id="more"></a></p>
@@ -396,10 +428,14 @@
     
     </summary>
     
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="python" scheme="https://wjsaya.github.io/tags/python/"/>
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
     
-      <category term="爬虫" scheme="https://wjsaya.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+      <category term="爬虫" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/%E7%88%AC%E8%99%AB/"/>
+    
+    
+      <category term="py爬虫" scheme="https://wjsaya.github.io/tags/py%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
