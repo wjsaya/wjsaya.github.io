@@ -1675,7 +1675,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4bff;
+  background: #9c7c8b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2512,7 +2512,6 @@ pre .javascript .function {
   }
 }
 .container .main-inner {
-/*背景*/
   width: 960px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2526,7 +2525,6 @@ pre .javascript .function {
   }
 }
 .content-wrap {
-/* 文章主页 */
   float: right;
   box-sizing: border-box;
   padding: 40px;
@@ -2555,6 +2553,7 @@ pre .javascript .function {
 .sidebar {
   position: static;
   float: left;
+  background: rgba(255,255,255,0.7);
   margin-top: 300px;
   width: 240px;
   background: #f5f7f9;
