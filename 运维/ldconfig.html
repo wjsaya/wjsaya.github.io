@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python每日一练," />
+  <meta name="keywords" content="运了个维,经验," />
 
 
 
@@ -95,20 +95,17 @@
 
 
 
-<meta name="description" content="题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0002 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。">
-<meta name="keywords" content="python每日一练">
+<meta name="description" content="问题描述：公司做安全扫描，发现openssh漏洞太多，因此需要对openssh做一次升级，升级openssh需要先升级openssl，linuxPAM等等，在装好oenssh之后开始编译openssh，然后：error: Your OpenSSL headers do not match your library……">
+<meta name="keywords" content="运了个维,经验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[python每日一练]--0002:生成激活码并存储到mysql数据库">
-<meta property="og:url" content="https://wjsaya.github.io/python每日一练/0002.html">
+<meta property="og:title" content="[运维]--ldconfig以及ld.so.conf遇到的问题及解决">
+<meta property="og:url" content="https://wjsaya.github.io/运维/ldconfig.html">
 <meta property="og:site_name" content="wjsaya的窝棚">
-<meta property="og:description" content="题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0002 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。">
-<meta property="og:image" content="http://img.blog.csdn.net/20170619150201633?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170619150230493?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-07-26T06:58:22.305Z">
+<meta property="og:description" content="问题描述：公司做安全扫描，发现openssh漏洞太多，因此需要对openssh做一次升级，升级openssh需要先升级openssl，linuxPAM等等，在装好oenssh之后开始编译openssh，然后：error: Your OpenSSL headers do not match your library……">
+<meta property="og:updated_time" content="2017-07-28T03:44:05.713Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[python每日一练]--0002:生成激活码并存储到mysql数据库">
-<meta name="twitter:description" content="题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0002 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20170619150201633?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="[运维]--ldconfig以及ld.so.conf遇到的问题及解决">
+<meta name="twitter:description" content="问题描述：公司做安全扫描，发现openssh漏洞太多，因此需要对openssh做一次升级，升级openssh需要先升级openssl，linuxPAM等等，在装好oenssh之后开始编译openssh，然后：error: Your OpenSSL headers do not match your library……">
 
 
 
@@ -136,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://wjsaya.github.io/python每日一练/0002.html"/>
+  <link rel="canonical" href="https://wjsaya.github.io/运维/ldconfig.html"/>
 
 
 
 
 
-  <title>[python每日一练]--0002:生成激活码并存储到mysql数据库 | wjsaya的窝棚</title>
+  <title>[运维]--ldconfig以及ld.so.conf遇到的问题及解决 | wjsaya的窝棚</title>
   
 
 
@@ -315,7 +312,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://wjsaya.github.io/python每日一练/0002.html">
+    <link itemprop="mainEntityOfPage" href="https://wjsaya.github.io/运维/ldconfig.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wjsaya">
@@ -332,7 +329,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[python每日一练]--0002:生成激活码并存储到mysql数据库</h1>
+          <h1 class="post-title" itemprop="name headline">[运维]--ldconfig以及ld.so.conf遇到的问题及解决</h1>
         
 
         <div class="post-meta">
@@ -344,8 +341,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T00:00:00+08:00">
-                06-19-2017
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T00:00:00+08:00">
+                07-28-2017
               </time>
             
 
@@ -367,8 +364,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
+                  <a href="/categories/运维/" itemprop="url" rel="index">
+                    <span itemprop="name">运维</span>
                   </a>
                 </span>
 
@@ -378,8 +375,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/运维/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -389,8 +386,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/python/python每日一练/" itemprop="url" rel="index">
-                    <span itemprop="name">python每日一练</span>
+                  <a href="/categories/运维/linux/故障处理/" itemprop="url" rel="index">
+                    <span itemprop="name">故障处理</span>
                   </a>
                 </span>
 
@@ -429,19 +426,18 @@
 
       
         <blockquote>
-<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0002 题：</strong>将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。</p>
+<p>问题描述：公司做安全扫描，发现openssh漏洞太多，因此需要对openssh做一次升级，升级openssh需要先升级openssl，linuxPAM等等，在装好oenssh之后开始编译openssh，然后：error: Your OpenSSL headers do not match your library……<br><a id="more"></a></p>
 </blockquote>
-<a id="more"></a>
 <hr>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li>循环，在count条件内调用length的循环来生成key。</li>
-<li>内循环，length条件下随机生成一个字符并追加到code变量。</li>
-<li>得到一个key之后，保存到mysql数据库</li>
-</ol>
-<hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#第 0002 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="keyword">from</span> random <span class="keyword">import</span> choice</div><div class="line"><span class="keyword">import</span> string</div><div class="line"><span class="keyword">import</span> pymysql.cursors</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_code</span><span class="params">(dict, length, count)</span>:</span></div><div class="line"><span class="comment">#根据给定字典，长度来得出激活码</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,int(count)+<span class="number">1</span>):</div><div class="line">        code = <span class="string">""</span></div><div class="line">    <span class="comment">#通过count限制激活码个数，循环调用choice来计算激活码</span></div><div class="line">        <span class="keyword">for</span> l <span class="keyword">in</span> range(<span class="number">0</span>,int(length)):</div><div class="line">            code = code+str(choice(dict))</div><div class="line">        save_to_mysql(i, code)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_to_mysql</span><span class="params">(id, code)</span>:</span></div><div class="line"><span class="comment">#保存到mysql数据库</span></div><div class="line">    host = (<span class="string">"192.168.122.18"</span>)</div><div class="line">    user = (<span class="string">"root"</span>)</div><div class="line">    pass_ = (<span class="string">"123qwe"</span>)</div><div class="line">    db = (<span class="string">"active"</span>)</div><div class="line">    <span class="comment">#设置数据库连接相关信息</span></div><div class="line">    connect = pymysql.connect(host, user, pass_, db)</div><div class="line">    cursor = connect.cursor()</div><div class="line">    <span class="comment">#链接数据库并设置游标</span></div><div class="line">    sql = <span class="string">"insert into activeCode(id, code) VALUES ('%d', '%s')"</span></div><div class="line">    data = (id, code)</div><div class="line">    cursor.execute(sql % data)</div><div class="line">    <span class="comment">#执行sql语句</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">     dict = string.ascii_letters[:]</div><div class="line">    <span class="comment">#设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></div><div class="line">    count = input(<span class="string">"请输入激活码个数："</span>)</div><div class="line">    <span class="keyword">if</span> count == <span class="string">""</span>:</div><div class="line">        count = <span class="string">"1"</span></div><div class="line">    length = input(<span class="string">"请输入激活码长度："</span>)</div><div class="line">    <span class="keyword">if</span> length == <span class="string">""</span>:</div><div class="line">        length = <span class="string">"8"</span></div><div class="line">    get_code(dict, length, count)</div></pre></td></tr></table></figure>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="http://img.blog.csdn.net/20170619150201633?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="运行截图"></p>
-<p><img src="http://img.blog.csdn.net/20170619150230493?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="结果截图"></p>
+<h2 id="故障重现："><a href="#故障重现：" class="headerlink" title="故障重现："></a>故障重现：</h2><p>编译安装好openssl，然后执行下列语句更新库文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">"/usr/local/openssl/lib"</span> &gt;&gt; /etc/ld.so.conf</div><div class="line">ldconfig</div></pre></td></tr></table></figure></p>
+<p>更新完毕，然后安装openssh吧：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">service sshd stop</div><div class="line">./configure --prefix=/usr --sysconfdir=/etc/ssh --with-ssl-engine --with-ssl-dir=/usr/<span class="built_in">local</span>/openssl</div></pre></td></tr></table></figure></p>
+<p>咦？报错了？</p>
+<h2 id="头文件不匹配图"><a href="#头文件不匹配图" class="headerlink" title="头文件不匹配图"></a>头文件不匹配图</h2><p>可以发现，此处报错是openssl的库文件和头文件不匹配，头文件没问题，版本就是我们想要的，可是库文件仍旧为老版本的。</p>
+<p>那么，我们先看下当前系统有哪些库文件：</p>
+<h2 id="库文件图："><a href="#库文件图：" class="headerlink" title="库文件图："></a>库文件图：</h2><p>通过上图，我们可以得到两个信息：<br>1, 当前系统有三个openssl库。<br>2, 当前系统上有两个不同版本的openssl库。</p>
+<p>三个库中，我们需要的其实是openssl1.02l，即100020cf这个库，但是系统首先识别到了lib64下的老版本库（1000010af），所以我们在安装openssh时就识别到了老版本的库，因此和我们的头文件匹配不上报错了。</p>
+<p>我对库文件的更新操作就是更改了ld.so.conf文件并执行ldonfig，那么我再次执行下ldconfig，但是这次加上-v参数并grep一下ssl相关的内容来看看：</p>
+<h2 id="ldconfig-v截图："><a href="#ldconfig-v截图：" class="headerlink" title="ldconfig -v截图："></a>ldconfig -v截图：</h2><p>从上图可以看出，系统识别的openssl版本，为1000010af的。。。</p>
 
       
     </div>
@@ -471,7 +467,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python每日一练/" rel="tag"># python每日一练</a>
+            <a href="/tags/运了个维/" rel="tag"># 运了个维</a>
+          
+            <a href="/tags/经验/" rel="tag"># 经验</a>
           
         </div>
       
@@ -484,8 +482,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/python每日一练/0000.html" rel="next" title="[python每日一练]--0000:图片添加数字">
-                <i class="fa fa-chevron-left"></i> [python每日一练]--0000:图片添加数字
+              <a href="/运维/fdisk导致分区错乱.html" rel="next" title="[运维]--fdisk导致分区错乱">
+                <i class="fa fa-chevron-left"></i> [运维]--fdisk导致分区错乱
               </a>
             
           </div>
@@ -493,10 +491,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/python每日一练/0004.html" rel="prev" title="[python每日一练]--0004:统计文档内的单词个数">
-                [python每日一练]--0004:统计文档内的单词个数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -631,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果图"><span class="nav-number">3.</span> <span class="nav-text">效果图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#故障重现："><span class="nav-number">1.</span> <span class="nav-text">故障重现：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头文件不匹配图"><span class="nav-number">2.</span> <span class="nav-text">头文件不匹配图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#库文件图："><span class="nav-number">3.</span> <span class="nav-text">库文件图：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ldconfig-v截图："><span class="nav-number">4.</span> <span class="nav-text">ldconfig -v截图：</span></a></li></ol></div>
             
 
           </div>
