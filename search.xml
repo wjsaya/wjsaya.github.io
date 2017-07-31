@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[[运维]--ldconfig以及ld.so.conf遇到的问题及解决]]></title>
-    <url>%2F%E8%BF%90%E7%BB%B4%2Fldconfig.html</url>
-    <content type="text"><![CDATA[问题描述：公司做安全扫描，发现openssh漏洞太多，因此需要对openssh做一次升级，升级openssh需要先升级openssl，linuxPAM等等，在装好oenssh之后开始编译openssh，然后：error: Your OpenSSL headers do not match your library…… 故障重现：编译安装好openssl，然后执行下列语句更新库文件：12echo "/usr/local/openssl/lib" &gt;&gt; /etc/ld.so.confldconfig 更新完毕，然后安装openssh吧：12service sshd stop./configure --prefix=/usr --sysconfdir=/etc/ssh --with-ssl-engine --with-ssl-dir=/usr/local/openssl 咦？报错了？ 头文件不匹配图可以发现，此处报错是openssl的库文件和头文件不匹配，头文件没问题，版本就是我们想要的，可是库文件仍旧为老版本的。 那么，我们先看下当前系统有哪些库文件： 库文件图：通过上图，我们可以得到两个信息：1, 当前系统有三个openssl库。2, 当前系统上有两个不同版本的openssl库。 三个库中，我们需要的其实是openssl1.02l，即100020cf这个库，但是系统首先识别到了lib64下的老版本库（1000010af），所以我们在安装openssh时就识别到了老版本的库，因此和我们的头文件匹配不上报错了。 我对库文件的更新操作就是更改了ld.so.conf文件并执行ldonfig，那么我再次执行下ldconfig，但是这次加上-v参数并grep一下ssl相关的内容来看看： ldconfig -v截图：从上图可以看出，系统识别的openssl版本，为1000010af的。。。]]></content>
-      <categories>
-        <category>运维</category>
-        <category>linux</category>
-        <category>故障处理</category>
-      </categories>
-      <tags>
-        <tag>运了个维</tag>
-        <tag>经验</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[[运维]--fdisk导致分区错乱]]></title>
-    <url>%2F%E8%BF%90%E7%BB%B4%2Ffdisk%E5%AF%BC%E8%87%B4%E5%88%86%E5%8C%BA%E9%94%99%E4%B9%B1.html</url>
-    <content type="text"><![CDATA[问题描述：现网几台准备部署应用和数据库的服务器，因为系统是云资源池分配给我们项目的，所以我们的分区不符合心意，需要自行调整一下，于是乎fdisk删除分区新建分区然后w保存退出完事儿，重启试试？然后，boom沙卡拉卡~~ 起因：就是描述里说的情况，删掉之后保存退出然后重启，系统直接报错了，当然后来解决了这个问题，下面就来故障回放一下。 实验环境：一台centos6.7的虚拟机；一块20G的虚拟磁盘。 故障回放：如下图，当前sdb有四个分区，sdbX对应到Xgb的大小，即sdb1为1G，sdb2为2G，sdb3为3G，sdb4为4G。]]></content>
-      <categories>
-        <category>运维</category>
-        <category>linux</category>
-        <category>故障处理</category>
-      </categories>
-      <tags>
-        <tag>运了个维</tag>
-        <tag>一些小小的经验</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[[python每日一练]--0008:找出html中正文]]></title>
     <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0008.html</url>
     <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily个人博客地址：https://wjsaya.github.io第 0008 题：一个HTML文件，找出里面的正文。 思路： 打开html文件； 呃。。。卡住了，不知道怎么搞了； 代码：1234567891011121314151617#!/usr/bin/env python3#coding: utf-8#Auther: wjsaya#第 0008 题：一个HTML文件，找出里面的正文。import reimport osdef analyze(file_name): os.listdir() print(os.getcwd()) line = open(file_name,'r',encoding='utf-8').read() print (line) # re.findal(r'',)if __name__ == "__main__": html = "./test.html" analyze(html) 效果图：]]></content>
@@ -94,19 +66,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[[python每日一练]--0004:统计文档内的单词个数]]></title>
-    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0004.html</url>
-    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0004 题：任一个英文的纯文本文件，统计其中的单词出现的个数。 思路 打开文件 利用re模块的findall方法返回为数组的特性，匹配单个单词 统计findall方法返回的数组长度即可。 代码12345678910111213141516171819#coding: utf-8#Auther: wjsaya#**第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。import redef file_open(filename): f = open(filename, 'r').read() #打开文件 ff = re.findall('([a-zA-Z0-9]+)', f) #正则匹配，组内为大小写字母加数字，后面限定位数为一位以上 print (ff) print (len(ff))if __name__ == "__main__": file = input("将要统计的文件为:") file_open(file)根据re模块的findall查找大小写字母加数字，且为1位以上的字符串。因为fingall返回的为数组，因此直接len即可得出个数。 效果图]]></content>
-      <categories>
-        <category>编程</category>
-        <category>python</category>
-        <category>python每日一练</category>
-      </categories>
-      <tags>
-        <tag>python每日一练</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[[python每日一练]--0002:生成激活码并存储到mysql数据库]]></title>
     <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0002.html</url>
     <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0002 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到mysql数据库 代码1234567891011121314151617181920212223242526272829303132333435363738394041#coding: utf-8#第 0002 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。#Auther: wjsayafrom random import choiceimport stringimport pymysql.cursorsdef get_code(dict, length, count):#根据给定字典，长度来得出激活码 for i in range(1,int(count)+1): code = "" #通过count限制激活码个数，循环调用choice来计算激活码 for l in range(0,int(length)): code = code+str(choice(dict)) save_to_mysql(i, code)def save_to_mysql(id, code):#保存到mysql数据库 host = ("192.168.122.18") user = ("root") pass_ = ("123qwe") db = ("active") #设置数据库连接相关信息 connect = pymysql.connect(host, user, pass_, db) cursor = connect.cursor() #链接数据库并设置游标 sql = "insert into activeCode(id, code) VALUES ('%d', '%s')" data = (id, code) cursor.execute(sql % data) #执行sql语句if __name__ == "__main__": dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" get_code(dict, length, count) 效果图]]></content>
@@ -120,9 +79,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[[python每日一练]--0001:生成激活码]]></title>
-    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0001.html</url>
-    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？ 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到文件 代码1234567891011121314151617181920212223242526272829303132333435363738#coding: utf-8#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）#Auther: wjsayafrom random import choiceimport stringimport osdef main(): if os.path.exists("./activecode.code"): print ("已经存在activecode.code文件，已经删除") os.remove("./activecode.code") dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" for i in range(0,int(count)): code = get_code(dict, length) with open ('activecode.code', 'a+') as f: f.write(code+'\n') #通过count限制激活码个数，循环调用get_code来计算激活码 def get_code(dict, length): #根据给定字典，长度来得出激活码 code = "" for i in range(0,int(length)): code = code+str(choice(dict)) return code if __name__ == "__main__": main() 效果图]]></content>
+    <title><![CDATA[[python每日一练]--0004:统计文档内的单词个数]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0004.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0004 题：任一个英文的纯文本文件，统计其中的单词出现的个数。 思路 打开文件 利用re模块的findall方法返回为数组的特性，匹配单个单词 统计findall方法返回的数组长度即可。 代码12345678910111213141516171819#coding: utf-8#Auther: wjsaya#**第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。import redef file_open(filename): f = open(filename, 'r').read() #打开文件 ff = re.findall('([a-zA-Z0-9]+)', f) #正则匹配，组内为大小写字母加数字，后面限定位数为一位以上 print (ff) print (len(ff))if __name__ == "__main__": file = input("将要统计的文件为:") file_open(file)根据re模块的findall查找大小写字母加数字，且为1位以上的字符串。因为fingall返回的为数组，因此直接len即可得出个数。 效果图]]></content>
       <categories>
         <category>编程</category>
         <category>python</category>
@@ -136,6 +95,19 @@
     <title><![CDATA[[python每日一练]--0000:图片添加数字]]></title>
     <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0000.html</url>
     <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0000 题：将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果 思路： PIL的Image.open打开图片。 获取图片大小。 调用ImageDraw，在图拍呢的指定位置写下数字。 代码：12345678910111213141516171819202122#coding: utf-8#Auther: wjsaya#**第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果from PIL import Image,ImageFont,ImageDrawdef main(): image = Image.open('./cat.jpg') #打开原图 wight, hight = image.size text = "233" color = (255,0,0) fontsize = wight//8 font = ImageFont.truetype("/usr/share/fonts/wps-office/arial.ttf",fontsize) #设定参数 draw = ImageDraw.Draw(image) draw.text((fontsize*6,0), text, color, font) image.save('./c.jpg', 'jpeg') #保存图片if __name__ == "__main__": main() 效果图：原图： 添加后：]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0001:生成激活码]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0001.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？ 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到文件 代码1234567891011121314151617181920212223242526272829303132333435363738#coding: utf-8#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）#Auther: wjsayafrom random import choiceimport stringimport osdef main(): if os.path.exists("./activecode.code"): print ("已经存在activecode.code文件，已经删除") os.remove("./activecode.code") dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" for i in range(0,int(count)): code = get_code(dict, length) with open ('activecode.code', 'a+') as f: f.write(code+'\n') #通过count限制激活码个数，循环调用get_code来计算激活码 def get_code(dict, length): #根据给定字典，长度来得出激活码 code = "" for i in range(0,int(length)): code = code+str(choice(dict)) return code if __name__ == "__main__": main() 效果图]]></content>
       <categories>
         <category>编程</category>
         <category>python</category>
