@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wjsaya.github.io/about/index.html</loc>
+    
+    <lastmod>2017-10-04T15:50:21.644Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wjsaya.github.io/%E6%9D%82%E8%B0%88/1.html</loc>
     
-    <lastmod>2017-10-04T15:40:02.222Z</lastmod>
+    <lastmod>2017-10-04T15:43:13.398Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0008.html</loc>
     
     <lastmod>2017-07-26T09:15:17.862Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wjsaya.github.io/about/index.html</loc>
-    
-    <lastmod>2017-07-26T06:59:08.495Z</lastmod>
     
   </url>
   
