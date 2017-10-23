@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wjsaya.github.io/"/>
-  <updated>2017-10-04T16:29:44.464Z</updated>
+  <updated>2017-10-23T01:27:34.786Z</updated>
   <id>https://wjsaya.github.io/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[python每日一练]--0009:找出html里的链接</title>
+    <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0009..html"/>
+    <id>https://wjsaya.github.io/python每日一练/0009..html</id>
+    <published>2017-10-19T16:00:00.000Z</published>
+    <updated>2017-10-23T01:27:34.786Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br>个人博客地址：<a href="https://wjsaya.github.io">https://wjsaya.github.io</a><br><strong>第 0009 题：</strong>一个HTML文件，找出里面的链接。</p>
+</blockquote>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><ol>
+<li>打开html文件；</li>
+<li>逐行读取文件;</li>
+<li>通过正则表达式匹配<a href="http://之类的开头的链接即可。" target="_blank" rel="external">http://之类的开头的链接即可。</a></li>
+</ol>
+<hr>
+<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python3</span></div><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="comment">#第009题，一个HTML文件，找出里面的链接。</span></div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">analyze</span><span class="params">(file_name)</span>:</span></div><div class="line">    <span class="comment">#print (os.listdir())</span></div><div class="line">    <span class="keyword">print</span> (os.getcwd())</div><div class="line">    line = open(file_name,<span class="string">'r'</span>,encoding=<span class="string">'utf-8'</span>).read()</div><div class="line">    R = (<span class="string">r'([hftps]+://[^\s]*)"'</span>)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span>  (re.findall(R, line)):</div><div class="line">        <span class="keyword">print</span> (i)</div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>: </div><div class="line">    html = <span class="string">"./test.html"</span></div><div class="line">    analyze(html)</div></pre></td></tr></table></figure>
+<h2 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h2><h2 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="http://img.blog.csdn.net/20171023092723948?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="0009"></h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-Me-the-Code/show-me-the-code&lt;/a&gt;&lt;br&gt;我的github链接：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&lt;/a&gt;&lt;br&gt;个人博客地址：&lt;a href=&quot;https://wjsaya.github.io&quot;&gt;https://wjsaya.github.io&lt;/a&gt;&lt;br&gt;&lt;strong&gt;第 0009 题：&lt;/strong&gt;一个HTML文件，找出里面的链接。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
+    
+  </entry>
   
   <entry>
     <title>[随笔一写]--在本科的第一个月</title>
@@ -303,45 +342,6 @@
   </entry>
   
   <entry>
-    <title>[python每日一练]--0004:统计文档内的单词个数</title>
-    <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0004.html"/>
-    <id>https://wjsaya.github.io/python每日一练/0004.html</id>
-    <published>2017-06-18T16:00:00.000Z</published>
-    <updated>2017-07-26T06:58:31.559Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0004 题：</strong>任一个英文的纯文本文件，统计其中的单词出现的个数。<br><a id="more"></a></p>
-</blockquote>
-<hr>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li>打开文件</li>
-<li>利用re模块的findall方法返回为数组的特性，匹配单个单词</li>
-<li>统计findall方法返回的数组长度即可。</li>
-</ol>
-<hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="comment">#**第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。</span></div><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">file_open</span><span class="params">(filename)</span>:</span></div><div class="line">    f = open(filename, <span class="string">'r'</span>).read()</div><div class="line">    <span class="comment">#打开文件</span></div><div class="line">    ff = re.findall(<span class="string">'([a-zA-Z0-9]+)'</span>, f)</div><div class="line">    <span class="comment">#正则匹配，组内为大小写字母加数字，后面限定位数为一位以上</span></div><div class="line">    <span class="keyword">print</span> (ff)</div><div class="line">    <span class="keyword">print</span> (len(ff))</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    file = input(<span class="string">"将要统计的文件为:"</span>)</div><div class="line">    file_open(file)</div><div class="line"></div><div class="line"></div><div class="line">根据re模块的findall查找大小写字母加数字，且为<span class="number">1</span>位以上的字符串。因为fingall返回的为数组，因此直接len即可得出个数。</div></pre></td></tr></table></figure>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="http://img.blog.csdn.net/20170619152836527?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="运行截图"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-Me-the-Code/show-me-the-code&lt;/a&gt;&lt;br&gt;我的github链接：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&lt;/a&gt;&lt;br&gt;&lt;strong&gt;第 0004 题：&lt;/strong&gt;任一个英文的纯文本文件，统计其中的单词出现的个数。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
-    
-      <category term="python每日一练" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
-    
-    
-      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[python每日一练]--0002:生成激活码并存储到mysql数据库</title>
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0002.html"/>
     <id>https://wjsaya.github.io/python每日一练/0002.html</id>
@@ -369,6 +369,45 @@
       &lt;blockquote&gt;
 &lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-Me-the-Code/show-me-the-code&lt;/a&gt;&lt;br&gt;我的github链接：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&lt;/a&gt;&lt;br&gt;&lt;strong&gt;第 0002 题：&lt;/strong&gt;将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。&lt;/p&gt;
 &lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[python每日一练]--0004:统计文档内的单词个数</title>
+    <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0004.html"/>
+    <id>https://wjsaya.github.io/python每日一练/0004.html</id>
+    <published>2017-06-18T16:00:00.000Z</published>
+    <updated>2017-07-26T06:58:31.559Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0004 题：</strong>任一个英文的纯文本文件，统计其中的单词出现的个数。<br><a id="more"></a></p>
+</blockquote>
+<hr>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
+<li>打开文件</li>
+<li>利用re模块的findall方法返回为数组的特性，匹配单个单词</li>
+<li>统计findall方法返回的数组长度即可。</li>
+</ol>
+<hr>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="comment">#**第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。</span></div><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">file_open</span><span class="params">(filename)</span>:</span></div><div class="line">    f = open(filename, <span class="string">'r'</span>).read()</div><div class="line">    <span class="comment">#打开文件</span></div><div class="line">    ff = re.findall(<span class="string">'([a-zA-Z0-9]+)'</span>, f)</div><div class="line">    <span class="comment">#正则匹配，组内为大小写字母加数字，后面限定位数为一位以上</span></div><div class="line">    <span class="keyword">print</span> (ff)</div><div class="line">    <span class="keyword">print</span> (len(ff))</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    file = input(<span class="string">"将要统计的文件为:"</span>)</div><div class="line">    file_open(file)</div><div class="line"></div><div class="line"></div><div class="line">根据re模块的findall查找大小写字母加数字，且为<span class="number">1</span>位以上的字符串。因为fingall返回的为数组，因此直接len即可得出个数。</div></pre></td></tr></table></figure>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="http://img.blog.csdn.net/20170619152836527?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="运行截图"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-Me-the-Code/show-me-the-code&lt;/a&gt;&lt;br&gt;我的github链接：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&lt;/a&gt;&lt;br&gt;&lt;strong&gt;第 0004 题：&lt;/strong&gt;任一个英文的纯文本文件，统计其中的单词出现的个数。&lt;br&gt;
     
     </summary>
     
