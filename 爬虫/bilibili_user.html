@@ -88,7 +88,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="wjsaya" />
+  <meta name="keywords" content="py爬虫," />
 
 
 
@@ -106,15 +106,20 @@
 
 
 
-<meta name="description" content="鸡既鸣矣，朝既盈矣。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wjsaya的博客">
-<meta property="og:url" content="https://wjsaya.github.io/archives/2017/index.html">
+<meta name="description" content="最近在学习python爬虫，写出来的一些爬虫记录在个人博客里，同时备份一个放在了github上。个人博客地址：https://www.wjsaya.topgithub地址：https://github.com/wjsaya/python_spider_learn/本次内容：从bilibili的开放api获取up主的公开信息">
+<meta name="keywords" content="py爬虫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[python爬虫]--爬取bilibili">
+<meta property="og:url" content="https://wjsaya.github.io/爬虫/bilibili_user.html">
 <meta property="og:site_name" content="wjsaya的博客">
-<meta property="og:description" content="鸡既鸣矣，朝既盈矣。">
+<meta property="og:description" content="最近在学习python爬虫，写出来的一些爬虫记录在个人博客里，同时备份一个放在了github上。个人博客地址：https://www.wjsaya.topgithub地址：https://github.com/wjsaya/python_spider_learn/本次内容：从bilibili的开放api获取up主的公开信息">
+<meta property="og:image" content="http://img.blog.csdn.net/20170614163946243?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170614164348318?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2018-01-31T10:39:56.338Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wjsaya的博客">
-<meta name="twitter:description" content="鸡既鸣矣，朝既盈矣。">
+<meta name="twitter:title" content="[python爬虫]--爬取bilibili">
+<meta name="twitter:description" content="最近在学习python爬虫，写出来的一些爬虫记录在个人博客里，同时备份一个放在了github上。个人博客地址：https://www.wjsaya.topgithub地址：https://github.com/wjsaya/python_spider_learn/本次内容：从bilibili的开放api获取up主的公开信息">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170614163946243?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
 
@@ -142,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="https://wjsaya.github.io/archives/2017/"/>
+  <link rel="canonical" href="https://wjsaya.github.io/爬虫/bilibili_user.html"/>
 
 
 
 
 
-  <title>归档 | wjsaya的博客</title>
+  <title>[python爬虫]--爬取bilibili | wjsaya的博客</title>
   
 
 
@@ -173,7 +178,7 @@
     
   
 
-  <div class="container sidebar-position-right  page-archive  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -311,255 +316,214 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 16 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wjsaya.github.io/爬虫/bilibili_user.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wjsaya">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/11935895?v=4&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wjsaya的博客">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">[python爬虫]--爬取bilibili</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-23T00:00:00+08:00">
+                11-23-2017
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/python/爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文被看了
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <blockquote>
+<p>最近在学习python爬虫，写出来的一些爬虫记录在个人博客里，同时备份一个放在了github上。<br>个人博客地址：<a href="https://www.wjsaya.top" target="_blank" rel="external">https://www.wjsaya.top</a><br>github地址：<a href="https://github.com/wjsaya/python_spider_learn/" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/</a><br>本次内容：从bilibili的开放api获取up主的公开信息<br><a id="more"></a></p>
+</blockquote>
+<hr>
+<h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><ol>
+<li>初始化数据库（db_init）。</li>
+<li>从up_waiting库获取up主id(get_up_mid)。</li>
+<li>传入up主id，从api获取信息，解析信息。</li>
+<li>解析基本信息，入库(up_info)<br>–    线程开始         –<br>解析关注的其他up主，获取id，与up_info表核对之后入库(up_waiting)<br>–    线程结束         –</li>
+<li><blockquote>
+<p>  回2</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div></pre></td></tr></table></figure>
+<p>下载过程截图：<br><img src="http://img.blog.csdn.net/20170614163946243?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="下载过程截图"></p>
+<p>恩。。。效果图：<br><img src="http://img.blog.csdn.net/20170614164348318?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="恩。。。效果图"></p>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/py爬虫/" rel="tag"># py爬虫</a>
+          
         </div>
       
+
+      
+      
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/python每日一练/0009..html" rel="next" title="[python每日一练]--0009:找出html里的链接">
+                <i class="fa fa-chevron-left"></i> [python每日一练]--0009:找出html里的链接
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/爬虫/bilibili_user.html" itemprop="url">
-              
-                <span itemprop="name">[python爬虫]--爬取bilibili</span>
-              
-            </a>
-        
-      </h2>
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-23T00:00:00+08:00"
-              content="11-23-2017" >
-          11-23
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/python每日一练/0009..html" itemprop="url">
-              
-                <span itemprop="name">[python每日一练]--0009:找出html里的链接</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-20T00:00:00+08:00"
-              content="10-20-2017" >
-          10-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/杂谈/first_month.html" itemprop="url">
-              
-                <span itemprop="name">[随笔一写]--在本科的第一个月</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-04T00:00:00+08:00"
-              content="10-04-2017" >
-          10-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/爬虫/mzitu.html" itemprop="url">
-              
-                <span itemprop="name">[python爬虫]--爬取mzitu.com的图片并保存</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-03T00:00:00+08:00"
-              content="08-03-2017" >
-          08-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/python每日一练/0008.html" itemprop="url">
-              
-                <span itemprop="name">[python每日一练]--0008:找出html中正文</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-26T00:00:00+08:00"
-              content="07-26-2017" >
-          07-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/python每日一练/0007.html" itemprop="url">
-              
-                <span itemprop="name">[python每日一练]--0007:代码统计</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-19T00:00:00+08:00"
-              content="07-19-2017" >
-          07-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="page-number" href="/archives/2017/page/3/">3</a><a class="extend next" rel="next" href="/archives/2017/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+    </div>
+  </div>
 
 
           </div>
@@ -567,6 +531,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -587,8 +555,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/11935895?v=4&s=460"
@@ -658,6 +635,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路："><span class="nav-number">1.</span> <span class="nav-text">思路：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码："><span class="nav-number">2.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -781,11 +774,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
