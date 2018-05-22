@@ -1677,7 +1677,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8278ee;
+  background: #797ddb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2765,7 +2765,7 @@ hr {
   -moz-box-shadow: 0 0 14px rgba(202,203,204,0.5);
 }
 .header {
-  background: url("/other/header.bgp") no-repeat left;
+  background: url("/images/header.bgp") no-repeat left;
 }
 .site-meta {
   float: none;
@@ -2831,7 +2831,7 @@ a {
   color: #7784ba;
 }
 .sidebar {
-  background: url("/other/sidebar.bgp") no-repeat center;
+  background: url("/images/sidebar.bgp") no-repeat center;
   box-shadow: inset 0 2px 20px #000;
   opacity: 0.9;
 }

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wjsaya.github.io/about/index.html</loc>
+    
+    <lastmod>2018-05-22T14:29:49.575Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wjsaya.github.io/%E7%88%AC%E8%99%AB/bilibili_user.html</loc>
     
     <lastmod>2018-01-31T10:39:56.338Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://wjsaya.github.io/%E6%9D%82%E8%B0%88/first_month.html</loc>
     
     <lastmod>2017-10-04T16:29:44.464Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wjsaya.github.io/about/index.html</loc>
-    
-    <lastmod>2017-10-04T15:50:21.644Z</lastmod>
     
   </url>
   
