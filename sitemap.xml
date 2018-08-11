@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wjsaya.github.io/hexo/some_upgrade.html</loc>
+    
+    <lastmod>2018-08-11T21:34:44.885Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0009..html</loc>
+    
+    <lastmod>2018-08-11T21:16:54.516Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wjsaya.github.io/%E6%9D%82%E8%B0%88/second_years.html</loc>
     
     <lastmod>2018-07-14T15:21:26.121Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>https://wjsaya.github.io/%E7%88%AC%E8%99%AB/bilibili_user.html</loc>
     
     <lastmod>2018-01-31T10:39:56.338Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0009..html</loc>
-    
-    <lastmod>2017-10-23T01:27:34.786Z</lastmod>
     
   </url>
   
