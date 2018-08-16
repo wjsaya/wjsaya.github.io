@@ -1,9 +1,10 @@
 ---
 title: '[python爬虫]--从煎蛋网下载图片'
-date: 2017-06-14
-tags: [py爬虫]
-categories: [编程,python,爬虫]
+date: 2017-06-15
+tags: [python,爬虫]
 ---
+
+
 
 
 
@@ -105,3 +106,9 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+下载过程截图：
+![jiandan_1](https://raw.githubusercontent.com/wjsaya/BlogPictures/master/jiandan_1.png)
+
+
+恩。。。效果图：
+![jiandan_2](https://raw.githubusercontent.com/wjsaya/BlogPictures/master/jiandan_2.png)

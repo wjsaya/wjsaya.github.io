@@ -1,112 +1,82 @@
 ---
 title: '[python爬虫]--爬取豆瓣音乐topX'
 date: 2017-06-15
-tags: [py爬虫]
-categories: [编程,python,爬虫]
+tags: [python,爬虫]
 ---
 
 
->最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。
+
+
+> 最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。
 github地址：https://github.com/wjsaya/python_spider_learn/
-本次内容：从煎蛋网下载图片
+本次内容：从豆瓣的top250音乐界面爬取指定的topX专辑。
 <!--more-->
 
 ----------
-
 思路：
 --
- 1. 拼接出所需的页面URL。
- 2. 用BS去访问和解析页面URL，获取页面内的所需图片并保存到本地并重命名。
+
+ 1. 拼接出豆瓣topX页面URL。
+ 2. 用BS去访问和解析豆瓣topX页面URL，获取页面内的所有歌手名和专辑名并拼接，然后输出。
 
 ----------
-
 
 
 代码：
 --
-
 ``` python
 #coding: utf-8
-import time
 import re
-import os
 import requests
 from bs4 import BeautifulSoup
 
-url = 'http://jandan.net/ooxx'
-firefox = {"User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0 FirePHP/0.7.4"}
-Pg_count = input("请输入想要获取的页数(直接回车默认页码为1):")
-if Pg_count == "":
-    Pg_count = "1"
-Pg_count=int(Pg_count)-1
-#给get_html函数使用，预先+1上去，这样-1就是当前第一页。
+url = "https://music.douban.com/top250?start=25"
+firefox={"User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0 FirePHP/0.7.4"}
 
-def get_content(url):
-#获取url，返回BS解析之后的content
-    html = requests.get(url, headers=firefox)
-    content = BeautifulSoup(html.content, "lxml")
-    return content
-
-def get_current_page(content):
-#获取url，返回url中的current-comment-page（即页码）
-    page_swap1 = content.find('span',class_="current-comment-page")
-    page_swap2 = str(page_swap1)
-    current_page = page_swap2[36:39]
-    #current_page = str(content.find('span',class_="current-comment-page"))[36:39]
-    #此处本来是写成了一句语句直接提取，后来想了想，万一以后想再看下，这会把自己绕晕，于是乎拆分了、、、
-    return current_page
-
-def get_img_url(content, max_page):
-#获取解码后的html文件以及最大页码。获取html中的图片img_url，然后把img_url和最大页码传递给get_img函数。
-    #html = BeautifulSoup(content, "lxml")
-    img_li = content.find_all("a", class_="view_img_link")
-    for i in img_li:
-        img_url = "http:"+i["href"]
-        #img_url = "http://"+i["href"].strip("/")
-        get_img(img_url, max_page)
-        #strip,用来删除某字符
-        #并且加上http协议头
-        
-def get_img(img_url, floder):
-#获取img_url和文件夹名（即当前网页页码），通过img_url下载图片并保存在floder内。
-    img_name = img_url[28:]
-    img_file = requests.get(img_url, headers=firefox)
-    q = img_file.content
-    with open ("./get/"+floder+"/"+img_name, 'wb') as img_file:
-        img_file.write(q)
-        print (floder+"/"+img_name+" is downloaded")
-    
-def get_html(max_page, Pg_count):
-#获取最大页码数及想要下载图片的页数，循环得出每页的url地址。
-    #http://jandan.net/ooxx/page-107#comments
-    while Pg_count >= 0:
-        pg = int(max_page)-Pg_count
-        url = "http://jandan.net/ooxx/page-"+str(pg)+"#comments"
-        print ("当前获取到的包含图片的页面url地址为："+url)
-        Pg_count -= 1
-        content = get_content(url)
-        print ("开始创建图片存放目录并获取图片链接地址......")
-        if os.path.exists("./get/") == False:
-            os.mkdir ("./get/")
-        if os.path.exists("./get/"+str(pg)) == False:
-            os.mkdir ("./get/"+str(pg))
-        print ("开始下载图片，本地存放目录为：./get/"+str(pg))
-        time.sleep(3)
-        get_img_url(content, str(pg))
-    
 def main():
-#主函数，一切的开端
-    content = get_content(url)
-    current_page = get_current_page(content)
-    get_html(current_page, int(Pg_count))
-    
+#主函数，一切的开始，以及变量值获取
+    maxm = input("想获取豆瓣排名前多少的音乐列表呢？(0-250之间）：")
+    count_main = 0
+    url_li = get_pages()
+    for i in range(0,9):
+        if count_main < int(maxm):
+            count_main += get_details(url_li[i], count_main, maxm)
+
+
+def get_soup(url):
+#获取html并解析为BS
+    html = requests.get(url, headers=firefox)
+    soup = BeautifulSoup(html.content, 'lxml')
+    return soup
+
+
+def get_details(url, count_in_loop, maxm):
+#获取豆瓣音乐专辑的名称与url链接
+    content = get_soup(url)
+    html = content.find_all('a', class_="nbg")
+    for i in range(0,25):
+        if count_in_loop < int(maxm):
+            print ("歌手-名字："+html[i]["title"])
+            print ("链接："+html[i]["href"])
+        count_in_loop += 1
+    return count_in_loop
+
+def get_pages():
+#从豆瓣网页解析出豆瓣下方的下一页标签中的地址列表，此函数可升级为解析下一页url。
+#或者直接构造豆瓣url地址，?start=XXX即可。
+    content = get_soup(url)
+    l = content.find("div", class_="paginator")
+    url_li = []
+    for i in l.find_all('a'):
+        url_li.append(i['href'])
+    return url_li[0:9]
 
 if __name__ == '__main__':
     main()
+
 ```
-下载过程截图：
-![下载过程截图](http://img.blog.csdn.net/20170614163946243?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
+效果图：
+--
+![douban_music](https://raw.githubusercontent.com/wjsaya/BlogPictures/master/douban_music.png)
 
-恩。。。效果图：
-![恩。。。效果图](http://img.blog.csdn.net/20170614164348318?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2F5YV93ag==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
