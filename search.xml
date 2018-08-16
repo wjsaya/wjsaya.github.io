@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[[python每日一练]--0013:爬百度贴吧图片]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0013.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code代码github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily个人博客地址：https://wjsaya.github.io 第 0013 题： 用 Python 写一个爬图片的程序，爬 这个链接 里的日本妹子图片 :-) 思路： 加载帖子url 解析返回的网页结构，获取所有图片的id 根据图片id下载对应的预览图和大图 下载的预览图存放路径为./pic/XXX.jpg 大图路径为./picBig/XXX.jpg 代码：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#!/usr/bin/env python3# -*- coding: utf-8 -*- # @Author: wjsaya(http://www.wjsaya.top) # @Date: 2018-08-15 23:55:53 # @Last Modified by: wjsaya(http://www.wjsaya.top) # @Last Modified time: 2018-08-16 02:10:36 import osimport requestsfrom lxml import etreehead = &#123; "Host" : "tieba.baidu.com", "User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0", "Accept" : "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language" : "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2", "Accept-Encoding" : "gzip, deflate"&#125;def main(): '''主函數 \n 下载的帖子预览图在pic目录 \n 高清图在picBig目录 \n ''' createDir("pic") createDir("picBig") rsp = requests.get("http://tieba.baidu.com/p/2166231880?traceid=", headers=head).content.decode('utf-8') a = etree.HTML(rsp) rsp = a.xpath("//img[@class='BDE_Image']/@src") for url in rsp: get_pic(url) get_big_pic(url)def get_pic(url): '''下载预览图 ''' head['host'] = "imgsrc.baidu.com" fileName = "./pic/" + url.split("=")[1].split("/")[1] rsp = requests.get(url, headers=head).content with open (fileName, 'wb') as f: f.write(rsp)def get_big_pic(url): '''下载高清图 ''' head['host'] = "imgsrc.baidu.com" id = url.split("=")[1].split("/")[1][:-4] fileName = "./picBig/" + id + ".jpg" fileUrl = "http://imgsrc.baidu.com/forum/pic/item/" + id + ".jpg" rsp = requests.get(fileUrl, headers=head).content with open (fileName, 'wb') as f: f.write(rsp) print(fileName + "下载完毕") def createDir(dirName): '''传入目录 \n 目录不存在，创建之 \n 存在，删除其下所有文件 \n ''' if dirName not in os.listdir(): os.mkdir(dirName) else: for i in os.listdir(dirName): fileName = ".\\" + dirName + "\\" + i os.remove(fileName)if __name__ == '__main__': main() 效果图： 总结:&emsp;&emsp;爬虫自己写过一些了，这个题目的需求还是比较简单的。只是简单的获取一下网页上的图片而已，不需要解析网页加载过程。前段时间把贴吧的自动签到功能实现了，后续还实现了模拟手机app签到以获得双倍经验。有空了把那份代码整理整理发出来。。。]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0012:敏感词过滤 type2]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0012.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code代码github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily个人博客地址：https://wjsaya.github.io第 0012 题： 敏感词文本文件 filtered_words.txt，里面的内容 和 0011题一样，当用户输入敏感词语，则用 星号 替换，例如当用户输入「北京是个好城市」，则变成「*是个好城市」。1234北京程序员公务员... 思路： 从文件解析敏感词、从终端获取用户输入。 根据敏感词对用户输入进行过滤。这里过滤需要考虑到输入内容不止一个需要过滤的词，所以稍微麻烦点： 读取所有的屏蔽词，放进一个列表 获取用户输入 遍历屏蔽词列表，用屏蔽词检索用户输入 如果有屏蔽词，将其替换为* 如果没有，不进行操作 返回处理后的用户输入 用下一个屏蔽词对处理后的用户输入进行上述操作 所有屏蔽词遍历完毕，输出过滤后字符串 敏感词列表(filtered_words.txt) 1234567891011北京程序员公务员领导牛比牛逼你娘你妈lovesexjiangge 代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112#!/usr/bin/env python3# -*- coding: utf-8 -*- # @Author: wjsaya(http://www.wjsaya.top) # @Date: 2018-08-10 12:33:32 # @Last Modified by: wjsaya(http://www.wjsaya.top) # @Last Modified time: 2018-08-13 23:02:29 class fliter(): '''fliter类 \n 传入敏感词文件 \n 获取用户输入，根据敏感词文件对输入进行过滤 ''' def __init__(self, fileName): dirty_dict = self.get_dirty(file) self.fliteredString = self.fliterMaster(dirty_dict) def get_dirty(self, fileName=''): '''解析文件获取敏感词，返回一个敏感词列表 ''' with open (fileName, 'r', encoding='utf-8') as f: re = f.readlines() for i in range(len(re)): re[i] = re[i].strip('\n') return(re) def fliterMaster(self, dirty_dict): '''过滤主函数 \n 获取用户输入，获取待屏蔽词典 \n 遍历屏蔽词 ，进行过滤\n 返回屏蔽后字符串 ''' instr = input("不要输入敏感词哦：") self.originString = instr # instr = ("程序员很牛比，但是运维更牛逼") for i in dirty_dict: inArray = self.str2array(instr) inDirtArray = self.str2array(i) pos_list = self.get_pos(inArray, inDirtArray[0]) if pos_list is None: # 未找到可能存在的屏蔽词，跳过过滤部分 continue else: # 可能有屏蔽词，交给fliterWorker进一步处理 for tag in pos_list: inArray = self.fliterWorker(tag, inArray, inDirtArray) instr = ''.join(inArray) return instr def str2array(self, instr): '''字符串单个拆分为数组 ''' redict = [] for i in instr: redict.append(i) return redict def get_pos(self, instr, word): '''传入句子，传入词 \n 找出此词在居中的所有位置 ''' try: re = instr.index(word) resp = [] resp.append(re) while(1): try: re = instr.index(word, re+1, len(instr)) resp.append(re) except Exception as e: break return resp except Exception as e: return None def fliterWorker(self, tag, inArray, inDirtArray): '''IN:字符数组；屏蔽词数组；可能存在屏蔽词的位置 \n OUT:替换完毕之后的字符数组 ''' resp = "" resp_temp = "" for i in range(tag): # 0-pos不变，从pos开始向后匹配 resp += inArray[i] for i in range(len(inDirtArray)): if inArray[tag+i] == inDirtArray[i]: # 字符数组和屏蔽词数组从左向右匹配，如果匹配到一个，resp_temp追加一个* # 任一过滤词没匹配到，resp_temp直接置为空 resp_temp += "*" else: resp_temp = '' break if resp_temp == '': # resp_temp为空，直接返回原字符数组 return inArray else: # resp_temp非空，则有匹配，把resp_temp加到原字符数组 resp += resp_temp for i in range(tag+len(inDirtArray), len(inArray)): # resp_temp加完之后，把原句剩下的内容追加 resp += inArray[i] return respif __name__ == '__main__': file = 'filtered_words.txt' fliter1 = fliter(file) print("未过滤字符串为：" + fliter1.originString) print("过滤后字符串为：" + fliter1.fliteredString) 效果图：]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0011:敏感词过滤 type1]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0011.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code代码github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily个人博客地址：https://wjsaya.github.io第 0011 题： 敏感词文本文件 filtered_words.txt，当用户输入敏感词语时，则打印出 Freedom，否则打印出 Human Rights。1234北京程序员公务员... 思路： 从文件解析敏感词。 根据敏感词决定输出。 敏感词列表(filtered_words.txt) 1234567891011北京程序员公务员领导牛比牛逼你娘你妈lovesexjiangge 代码：123456789101112131415161718192021222324252627282930313233343536#!/usr/bin/env python3# -*- coding: utf-8 -*- # @Author: wjsaya(http://www.wjsaya.top) # @Date: 2018-08-10 10:33:32 # @Last Modified by: wjsaya(http://www.wjsaya.top) # @Last Modified time: 2018-08-10 12:33:32 def get_dirty(fileName=''): '''解析文件获取敏感词 ''' with open (fileName, 'r', encoding='utf-8') as f: re = f.readlines() for i in range(len(re)): re[i] = re[i].strip('\n') return(re)def fliter(dirty_dict): '''过滤敏感词 ''' instr = input("不要输入敏感词哦：") for i in dirty_dict: if (instr == i): print('Freedom') return 1 print('Human Rights') return 0if __name__ == '__main__': file = 'filtered_words.txt' dirty_dict = get_dirty(fileName=file) while(1): fliter(dirty_dict) 效果图：]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0010:生成验证码图片]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0010.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code代码github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily个人博客地址：https://wjsaya.github.io第 0010 题： 使用 Python 生成类似于下图中的字母验证码图片 思路： 根据指定位数获取随机验证码字符串：直接用random模块即可。 把字符串转换成图片：通过PIL库画图。 代码：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#!/usr/bin/env python3# -*- coding: utf-8 -*- # @Author: wjsaya(http://www.wjsaya.top) # @Date: 2018-08-10 00:01:32 # @Last Modified by: wjsaya(http://www.wjsaya.top) # @Last Modified time: 2018-08-10 00:46:47 import randomimport stringfrom PIL import Image, ImageFont, ImageDraw, ImageFilterdef get_str(): '''获取单个随机字符 string.digits + string.ascii_letters = 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ''' return random.choice(string.digits + string.ascii_letters)def get_color(): '''返回颜色元组 ''' return (random.randint(64,200),random.randint(64,200),random.randint(64,200))def get_pic(num=4): '''生成指定验证码个数的验证码图片，默认为4个，每个的大小均为60*60 ''' heigh = 60 width = heigh * num image = Image.new('RGB', (width, heigh), (255, 255, 255)) draw = ImageDraw.Draw(image) font = ImageFont.truetype('ariblk.ttf',44) # 创建图片，画布，以及字体对象 for x in range(width): for y in range(heigh): draw.point((x,y),fill=get_color()) # 画布随机加噪点 for t in range(num): draw.text((60 * t + 10, 0), get_str(), font=font, fill=get_color()) # 随机获取num个字符，使用指定字体，使用随机颜色 image = image.filter(ImageFilter.SMOOTH) # 模糊处理图片 image.save('vercode.png')if __name__ == '__main__': num = 4 get_pic(num) 效果图：]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[hexo]--给站点做了个小升级]]></title>
+    <url>%2Fhexo%2Fsome_upgrade.html</url>
+    <content type="text"><![CDATA[对博客做了些升级，原因是网站文章被爬取，以及CSDN图片无法外链问题个人博客地址：https://www.wjsaya.topCSDN博客地址：https://blog.csdn.net/saya_wj 问题列表 这个博客是个人写着玩儿的，主要是自己做一些总结。因为之前听说github Pages是不允许百度蜘蛛爬取的，好奇尝试百度了下部分文章，不百度没什么，百度之后发现不止百度爬取了，还有其他未授权网站爬了我的文章，爬了也就算了，还在图片上打上了大大的马赛克。。。不过我倒是感谢他们的蜘蛛，这样帮我推广的话，我觉得有必要在文章里写下我自己的博客地址了233 之前的文章都是CSDN发一份，博客发一份，因此前面的文章配图都是直接扣的CSDN的地址。。。一直以来相安无事，不知何时，CSDN做了防盗链，现在直接访问的话就会抛出403错误，看来是时候找一个图床了。说起来怪不好意思的，在CSDN推广了博客，还顺带借用了人家的图床那么久。 此外，我额外给hexo加了个博客总字数统计的插件。大致记录下。 版权问题 关于这个，以后的文章配图里或者文章里会出现我自己的博客地址。 添加版权声明 到站点_config.yml找到post_copyright，将下面的enable改为true 默认版权放在正文里，看着不舒服，挪到文章底部。修改./themes/next/layout/_macro/post.swig，把post-copyright的div放进post-footer里，在post.tags之后。 最终效果如下图，嘛。。。君子协定而已。 图库替换重新找图床，备选项如下： 服务商 结论 onedrive 5G空间，但是国内访问速度实在是。。。 微博相册 盗链，有人在用，但是能用多久呢？我用CSDN已经翻车了。。。 百度云 有8s前车之鉴，而且相当于盗链，不太想用。 坚果云 空间暂时无限？想分享？手机号实名。想给未注册坚果云用户分享？收费。 亿方云 100G空间，想共享？手持身份证实名。 七牛云 20G空间，40G流量，手持身份证实名。 网易云 50G空间，50G流量，手持身份证实名。 icloud 没有测试，但是估计很难用。 github 无限？反正目前来看还行。 码云 1G空间限制。之前准备放博客时恶心到我，不太想用。 &emsp;&emsp;最终结论：国内一票xx云要么需要实名，要么有坑；国外的google Drive，onedrive不可用，最终用github…而且github里图片是固定链接（仓库+文件名），这点很爽！唯一麻烦的可能就是需要在本地维护一个git的仓库了吧。。。没有图床来的方便。本篇博文图片已经迁移到github，以前的文章会再找时间进行迁移。 其他优化 开启阅读进度，到站点_config.yml找到scrollpercent，改为true即可。 开启站点和文章字数统计。 先用npm安装 hexo-wordcount： 1npm install hexo-wordcount 接下来对标题栏字数统计做一些自定义： 打开站点_config.yml找到post_wordcount，把下面的item_text改为false，wordcount和min2read改为true。 打开./themes/next/layout/_macro/post.swig，定位到title为post.wordcount的span和post.min2read的span，在后面加一点自定义的内容（我这里就是“ 字”和“ 钟”），如下图： 修改前： 1...忘记保存了，略过吧。。。 修改后（Line190-224）： 12345678910111213141516171819&#123;% if theme.post_wordcount.wordcount or theme.post_wordcount.min2read %&#125;...省略无关代码... &#123;% if theme.post_wordcount.item_text %&#125; &lt;span class="post-meta-item-text"&gt;&#123;&#123; __('post.wordcount') &#125;&#125;&lt;/span&gt; &#123;% endif %&#125; &lt;span title="&#123;&#123; __('post.wordcount') &#125;&#125;"&gt; &#123;&#123; wordcount(post.content) &#125;&#125; 字 &lt;/span&gt; &#123;% endif %&#125;...省略无关代码... &#123;% if theme.post_wordcount.item_text %&#125; &lt;span class="post-meta-item-text"&gt;&#123;&#123; __('post.min2read') &#125;&#125;&lt;/span&gt; &#123;% endif %&#125; &lt;span title="&#123;&#123; __('post.min2read') &#125;&#125;"&gt; &#123;&#123; min2read(post.content) &#125;&#125; 分钟 &lt;/span&gt; &#123;% endif %&#125; &lt;/div&gt; &#123;% endif %&#125; 效果图： 对站点底部自定义 首先，去掉”由“、”强力驱动”、”主题 - “以及“本博客共计”，放在那里着实碍眼。 直接修改./themes/next/layout/_partials/footer.swig，此处需要删减一些代码 原代码： 1234567891011121314151617181920212223242526272829303132333435363738&#123;% if theme.copyright %&#125;&lt;div class="powered-by"&gt; &#123;&#123; __('footer.powered', '&lt;a class="theme-link" href="https://hexo.io"&gt;Hexo&lt;/a&gt;') &#125;&#125;&lt;/div&gt;&lt;div class="theme-info"&gt; &#123;&#123; __('footer.theme') &#125;&#125; - &lt;a class="theme-link" href="https://github.com/iissnan/hexo-theme-next"&gt; NexT.&#123;&#123; theme.scheme &#125;&#125; &lt;/a&gt;&lt;/div&gt;&#123;% endif %&#125;&lt;div class="busuanzi-count"&gt; &lt;span class="site-pv"&gt;本博客共计&#123;&#123; totalcount(site) &#125;&#125;字&lt;/span&gt;&lt;/div&gt;``` - 修改后： ```shell&#123;% if theme.copyright %&#125;&lt;div class="powered-by"&gt; &#123;&#123;'&lt;a class="theme-link" href="https://hexo.io"&gt;Hexo&lt;/a&gt;'&#125;&#125;&lt;/div&gt;&lt;div class="theme-info"&gt; &lt;a class="theme-link" href="https://github.com/iissnan/hexo-theme-next"&gt; NexT.&#123;&#123; theme.scheme &#125;&#125; &lt;/a&gt;&lt;/div&gt;&#123;% endif %&#125;&lt;div class="busuanzi-count"&gt; &lt;span class="site-pv"&gt; &#123;&#123; totalcount(site) &#125;&#125;字 &lt;/span&gt;&lt;/div&gt; 效果图： 把字数统计和主题版权声明合并 直接修改./themes/next/layout/_partials/footer.swig 原代码（Line11-27）： 123456789101112131415161718 &#123;% if theme.copyright %&#125;&lt;div class="powered-by"&gt;&#123;&#123;'&lt;a class="theme-link" href="https://hexo.io"&gt;Hexo&lt;/a&gt;'&#125;&#125;&lt;/div&gt;&lt;div class="theme-info"&gt;&lt;a class="theme-link" href="https://github.com/iissnan/hexo-theme-next"&gt; NexT.&#123;&#123; theme.scheme &#125;&#125;&lt;/a&gt;&lt;/div&gt;&#123;% endif %&#125;&lt;div class="busuanzi-count"&gt;&lt;span class="site-pv"&gt; &#123;&#123; totalcount(site) &#125;&#125;字&lt;/span&gt;&lt;/div&gt; 修改后(直接丢弃了字数统计和主题的class…)： 123456789101112 &#123;% if theme.copyright %&#125;&lt;div class="powered-by"&gt;&#123;&#123;'&lt;a class="theme-link" href="https://hexo.io"&gt;Hexo&lt;/a&gt;'&#125;&#125;&lt;/div&gt;&lt;div class="powered-by"&gt;&lt;a class="theme-link" href="https://github.com/iissnan/hexo-theme-next"&gt; NexT.&#123;&#123; theme.scheme &#125;&#125;&lt;/a&gt;&lt;/div&gt;共 &#123;&#123; totalcount(site) &#125;&#125; 字&#123;% endif %&#125; 效果图：]]></content>
+      <categories>
+        <category>hexo</category>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[随笔一写]--在本科的第二年前]]></title>
+    <url>%2F%E6%9D%82%E8%B0%88%2Fsecond_years.html</url>
+    <content type="text"><![CDATA[记在川师的第二年前个人博客地址：https://www.wjsaya.topgithub地址：https://github.com/wjsaya/python_spider_learn/ &emsp;&emsp;到川师一年了。一年过去，和去年入学的我，有哪些不同呢？一年间，曾经鄙视编程的我，现在也学习了C，java，python。甚至去自学了qt；去年12月考四级心惊胆战，最终也还是过线了,虽然成绩很惨（495）。 &emsp;&emsp;不得不承认，开发在IT行业依然是最重要的一块，曾经的我看的十分浅显：写代码？那是程序员的事情。我不用关心，我是运维，我管好服务器就好。当初并没有意识到，编程仅仅是一项技能，它不是绑定在开发身上的属性，编程对于开发，正如linux对于运维，都是吃饭的家伙。但是正如开发需要了解常见服务的搭建方法(不然每次测试都找运维?)，运维当然也需要掌握开发技能（写个自动化巡检脚本都要找开发帮忙？），不会开发的运维，总是不如会开发的运维那般吃香。做事效率以及思考方式也会有很大差别。诚然，作为运维不需要如开发般熟悉开发，但是人总不能把自己限定太死。曾经的我画地为牢，我**就是个运维，不需要想那么多有的没的。但是当今的形式，不会开发的纯运维又能滋润多久？换句话说，做IT这一行，不会开发，那你能够做多久？By the way: 我这样自学了下C的人，居然还在蓝桥杯拿了个省三等奖，可见蓝桥杯水分233 &emsp;&emsp;对于普通大学生活，我是万万没想到四级能够过关，毕竟专科三年间就上了两学期英语课，除去上课就没碰过英语。想想去年四级考试前的准备过程：天天背单词，两天一次听力，一天两篇阅读，想来还是很有用的。。。作文翻译没看，看了可能 分数高点 也就那样儿。 &emsp;&emsp;总之一年过去了，仿佛一切又回到了原点。和一年前的我，我有什么变化？好像也没啥变化。。。依然是菜鸡一只2333 &emsp;&emsp;最后回顾一下曾经的小计划： 高数英语弄起走：没办法，即使再艰难，课也得上啊； 每周七天，除开不可抗力，保证晚上跑步三次，每次4-5km左右：身体才是革命的本钱，健壮的体魄才能撑起这并不怎么健硕的大脑； 在这之外呢，嘛。。。人生苦短，我学python。。。 1, 高数没挂，英语四级过关（495），恩，勉强完成任务！ 2, 关于这点，我可以骄傲的说我完成啦！每次跑步都是5km。&ensp;&ensp;据我的悦跑圈记录，2017年总跑量245.70KM，2018年目前总跑量180.18KM。 3, 这一点。。。嘛，继续继续。 wjsaya &ensp; 2018/7/14 22:24 &ensp; 于 &ensp; 四川省成都市]]></content>
+      <categories>
+        <category>其他</category>
+        <category>随笔一写</category>
+      </categories>
+      <tags>
+        <tag>随笔一写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0009:找出html里的链接]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0009.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily个人博客地址：https://wjsaya.github.io第 0009 题：一个HTML文件，找出里面的链接。 思路： 打开html文件； 逐行读取文件; 通过正则表达式匹配http://之类的开头的链接即可。 代码：1234567891011121314151617#!/usr/bin/env python3#coding: utf-8#Auther: wjsaya#第009题，一个HTML文件，找出里面的链接。import reimport osdef analyze(file_name): #print (os.listdir()) print (os.getcwd()) line = open(file_name,'r',encoding='utf-8').read() R = (r'([hftps]+://[^\s]*)"') for i in (re.findall(R, line)): print (i)if __name__ == "__main__": html = "./test.html" analyze(html) 效果图：]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[随笔一写]--在本科的第一个月]]></title>
+    <url>%2F%E6%9D%82%E8%B0%88%2Ffirst_month.html</url>
+    <content type="text"><![CDATA[进入本科的第一个月，心累！总结篇 &ensp; &ensp;&ensp;&ensp;一个月前，也就是9月4日。那是我专升本之后到本科学校报道的日子，在那天，已经毕业的大三的我，在一个陌生的学校，又一次成为了小学弟。过去了一个月，我的生活变化并不大，一样的吃一样的睡，区别可能就是宿舍可以洗热水澡？更大的区别可能就是有了压力吧。 &ensp; &ensp;&ensp;&ensp;不得不承认，走了捷径就要付出代价。升本时是免试的，因此我对于考试的科目：C语言，英语，高数没有做任何的了解与学习，到了这里，发现C语言只记得基础了，英语做一篇四级阅读只能对一半，高数课上完全是坐飞机（哈哈哈），不过还好，其他的专业课打都是自己以前曾经接触过的，压力不大。接下来的就是恶补高数和英语，高数起码要跟得上老师的步伐吧？至于英语呢，先定个目标，12月通过四级考试（嘛。。。貌似希望不大）。落下的，总得慢慢捡起来不是（苦笑）。 &ensp; &ensp;&ensp;&ensp;除了学习上的落差，更大的体会就是课堂了，在专科的我从来没有担心过作业这种东西（曾经的内心PS：作业？就是上课让自己练习的那些？太easy了，早已完成），到了新的环境，貌似找到了一丢丢以前上学的感觉，上课听不懂，下课还得复习，课后居然还有作业等着完成，唉，总之调整心态吧，这里的教学方式和专科的确差了太多了，花了一个月来慢慢适应，也算是逐渐接受了这种方式。 &ensp; &ensp;&ensp;&ensp;还有一点，就是关于周遭的人了，新的寝室的五个老哥也个个都是人才，说话也好听，我超喜欢这里的！不同的地方总会遇到不同的人，不同的人碰撞在一起自然会碰撞出不同的火花。初到寝室有点不安，室友会是怎样的人？现在的我十分坦然，个个都是人才，未来两年不寂寞哈哈。 最后列一下自己以后的小计划： 高数英语弄起走：没办法，即使再艰难，课也得上啊； 每周七天，除开不可抗力，保证晚上跑步三次，每次4-5km左右：身体才是革命的本钱，健壮的体魄才能撑起这并不怎么健硕的大脑； 在这之外呢，嘛。。。人生苦短，我学python。。。 wjsaya &ensp; 2017/10/4 22:55 &ensp; 于 &ensp; 四川省成都市]]></content>
+      <categories>
+        <category>其他</category>
+        <category>随笔一写</category>
+      </categories>
+      <tags>
+        <tag>随笔一写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python爬虫]--爬取mzitu.com的图片并保存]]></title>
+    <url>%2F%E7%88%AC%E8%99%AB%2Fmzitu.html</url>
+    <content type="text"><![CDATA[最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/因为本人为菜鸡一只，所以写出来的代码应该是十分丑陋并且效率底下的，请各路大神不要鄙视，当然，如果能够不吝赐教那就更好啦(≧▽≦)/个人博客：https://wjsaya.github.ioCSDN博客：:http://blog.csdn.net/saya_wj本次内容:爬取mzitu.com的图片并保存到本地 思路： 获取用户输入的图片合辑个数。 在个数限制内访问汇总页，获取相应数量的图片合辑。 获取到图片合辑之后，访问图片合辑，拿到图片合辑的每一个页面的url。 访问页面url，获取图片下载链接。 下载图片，同时做一些处理（创建合辑文件夹，判断是否已下载等等）。 代码：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788#!/usrbin/env python3# coding: utf-8import requestsimport sysimport ioimport reimport osdef get_pic(url): # 传入一个起始图片页面url，获取其他的所有图片页面url，如下： #&lt;a href="http://www.mzitu.com/98966/2"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/a&gt; # print ("获取页面url完成，开始获取图片url并下载...") q = requests.get(url, headers=head).text title_R = (r'&lt;h2.*title"&gt;(.*)&lt;/h2&gt;') title = re.findall(title_R, q)[0] page_R = (r'&lt;span&gt;(..)&lt;/span&gt;') max_page = re.findall(page_R, q)[0] # title是网页标题，可能含有特殊字符，需过滤 title = re.sub(u'[\/:*?"&gt;|&lt; 满]+', "#", title) #title = re.sub(r'[.]+',"？",title) return (title, max_page)def change_dir(where): try: os.chdir(where) except: os.mkdir(where) os.chdir(where) print("创建并切换到目录'" + where + "'完成")# print ("切换目录到'"+where+"'完成")def down(one, url): # 传入一个包含图片的页面url，获取里面的图片地址并下载到本地，如下： #&lt;img src="http://i.meizitu.net/2017/07/30a01.jpg" alt="**************"&gt; title = one[0] max_page = one[1] R = (r'&lt;img src="(.*)" alt=".*&gt;') change_dir('./mzitu') try: os.chdir("./" + title) print("'" + title + "'已下载，跳过") change_dir("../../") except: change_dir("./" + title) for i in range(0, int(max_page)): page = url + "/" + str(i + 1) html = requests.get(page, headers=head).text img_url = re.findall(R, html)[0] pic = requests.get(img_url, headers=head) with open(str(i) + '.jpg', 'wb') as f: for p in pic: f.write(p) change_dir("../../")def get_url_list(url): # 传入all页面的url，获取其他的所有文章链接，如下： #&lt;a href="http://www.mzitu.com/99009" target="_blank"&gt;********&lt;/a&gt; text = requests.get(url, headers=head).text R = (r'.*(http://www.mzitu.com/[0-9]+)".*')# print (text) print("从" + url + "获取专辑列表完成，开始获取页面url...") return re.findall(R, text)if __name__ == "__main__": # sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='gb18030') #改变标准输出的默认编码 # 曾经在运行时报字符编码错误所以添加了一条，但是现在去掉了，貌似也没报错。。。 head = &#123; 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0', 'Referer': 'http://www.mzitu.com/37288/3'&#125; url = 'http://www.mzitu.com/all' page_number = input("下载多少页？") #page_number = "2" print("#" + page_number + "#") url_list = get_url_list(url) count = 0 for i in url_list: if str(count) &lt; page_number: one = get_pic(i) down(one, i) count += 1 print(i + "：已经全部下载完成") 效果图：由于内容为16+，所以不贴图了。。。需要的自行执行 一些废话：自学东西毕竟是没什么压力的，所以总是断断续续，作为一个搞运维、日常负责打杂的，想到写代码就不是特别开心，唉。。。但是还得搞啊，无论两年后我还会不会搞运维，但是一定的编程能力是不可或缺的，现在的IT行业，有哪一个岗位能够脱离代码呢？而且，万一两年之后不搞运维想搞点其他的，那么编程能力就是刚需了，不论如何，技多不压身，先从python走起！]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>py爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0008:找出html中正文]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0008.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily个人博客地址：https://wjsaya.github.io第 0008 题：一个HTML文件，找出里面的正文。 思路： 打开html文件； 呃。。。卡住了，不知道怎么搞了； 代码：1234567891011121314151617#!/usr/bin/env python3#coding: utf-8#Auther: wjsaya#第 0008 题：一个HTML文件，找出里面的正文。import reimport osdef analyze(file_name): os.listdir() print(os.getcwd()) line = open(file_name,'r',encoding='utf-8').read() print (line) # re.findal(r'',)if __name__ == "__main__": html = "./test.html" analyze(html) 效果图：]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0007:代码统计]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0007.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily个人博客地址：https://wjsaya.github.io第 0007 题：有个目录，里面是你自己写过的程序，统计一下你写过多少行代码。包括空行和注释，但是要分别列出来。 思路： 列出目录下所有py文件； 依次逐行读取py文件； 循环加判断，根据结果来更改数组的值，数组里就是统计结果。 代码：12345678910111213141516171819202122232425262728293031#!/usr/bin/env python3#coding: utf-8#Auther: wjsaya#**第 0007 题：**有个目录，里面是你自己写过的程序，统计一下你写过多少行代码。包括空行和注释，但是要分别列出来。import osimport redef file_list(dir): os.chdir(dir) F_list = [ F for F in os.listdir("./") if os.path.splitext(F)[1]==".py"] for name in F_list: result = word_count(name) print (name+"中，注释为"+str(result[0])+"行，空行为"+str(result[1])+"行，有效代码行数为"+str(result[2]))def word_count(name): count = [0, 0, 0] #第一个为注释，第二个为空格，第三个为代码 file = open(name, 'r', encoding="utf-8").readlines() for line in file: if re.match(r'[ ]*#', line): count[0] += 1 elif re.match(r'$', line): count[1] += 1 else: count[2] += 1 return countif __name__ == "__main__": #dir = input("输入代码目录:") dir = "code" file_list(dir) 效果图： ps：懒癌发作的日常。。。离上一篇已经过去了10天233，慢慢来，不着急。。。另外，我的个人博客是托管在最大的同性交友网站，不是，是最大的代码托管平台github上的，所以访问可能会有点慢ԅ(¯㉨¯ԅ)]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0006:单词统计]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0006.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0006 题：你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。 思路： 嘛。。。先读取出所有的词；2.利用提取出来的词做一个字典，内容为“单词：出现次数”； 一个循环，读出字典内的最大值并提取相应的单词。 代码：12345678910111213141516171819202122232425262728293031323334353637383940414243444546#coding: utf-8#Auther: wjsaya#**第 0006 题：**你有一个目录，放了你一个月的日记，都是 txt，为了避免分词的问题，假设内容都是英文，请统计出你认为每篇日记最重要的词。import osimport redef dir():#检测日志目录是否存在，不存在就创建 if not os.path.exists("log"): os.mkdir("./log") print ("log目录不存在，已创建") os.chdir("./log")def dective_words():#检测文件内的单词,并且调用word_count来统计各个单词中出现频率最高的一个 for file in os.walk("./"): print ("当前目录为："+os.getcwd()) for i in file[2]: file = open(i, 'r', encoding="utf-8").read() word_list = re.findall('([a-zA-Z0-9]+)', file) word_dict = word_count(word_list) max = 0 for key in word_dict.keys(): if max &lt; int(word_dict.get(key)): max = word_dict.get(key) max_key = key print ("在"+i+"中,最重要的词为："+max_key+"，共出现了"+str(max)+"次") def word_count(word_list):#统计单词个数 word_dict=&#123;&#125; frequency = 1 for single_word in word_list: try: number = word_dict.get(single_word) word_dict[single_word]=number+1 except: word_dict[single_word]=frequency return word_dictif __name__ == "__main__": dir() dective_words() 效果图： ps：因为平时上班的原因（屁，就是懒癌发作233），也是很久未更新了，作为一只python小菜鸟，个人觉得有一个这种小的练手项目还是很棒棒的，作为一只只有C语言基础（真-基础）的菜鸡，让我独立搞个练手项目出来不现实，让我去啃基础感觉又没必要，毕竟我又不是程序员（屁，就是懒得看书233），于是·我能找到的一种方式就是找小题目来给自己做，嘛，反正是让自己入门，所以如果实现思路肯定是比不过学过算法的各位大佬的啦，慢慢来吧，归根结底，不就是个玩~ᕦ༼ ✖ ਊ ✖ ༽ᕤ]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0003:统计文档内的单词个数并存放到redis数据库]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0003.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0003 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到redis数据库 代码12345678910111213141516171819202122232425262728293031323334#coding: utf-8#**第 0003 题：**将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。#Auther: wjsayafrom random import choiceimport stringimport redisdef get_code(dict, length, count):#根据给定字典，长度来得出激活码 for i in range(1,int(count)+1): code = "" #通过count限制激活码个数，循环调用choice来计算激活码 for l in range(0,int(length)): code = code+str(choice(dict)) save_to_redis(count, code)def save_to_redis(max, value): #保存到redis数据库 redisdb = redis.Redis(host='10.2.2.131',port=6379,db=0) redisdb.lpush('active_code',value) redisdb.lrange('active_code',0,max) redisdb.save()if __name__ == "__main__": dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" get_code(dict, length, count) 效果图]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0005:把图片大小控制在iphone5的分辨率以下]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0005.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0005 题：你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。 思路 通过OS库的listdir列出所有图片； 然后通过PIL库的Image.open打开图片并获取图片大小； 最后进入一个死循环：通过PIL库的Image.resize来缩小图片为原图片的90%，直到图片大小小于iphone5的分辨率大小，退出循环。 代码123456789101112131415161718192021222324252627282930#coding: utf-8#Auther: wjsaya#**第 0005 题：**你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。import osfrom PIL import Imagedef image_small(dir1, dir2): list = os.listdir(dir1) for i in list: image = Image.open(dir1+'/'+i) while True: h,w = image.size #获取图片原始大小,然后进死循环，不停缩小图片为原来的90%，直到大小缩小为iphone5所支持的分辨率。 if h &lt; 1136: #iphone5分辨率为1136x640 if w &lt; 640: break image = image.resize((int(h*0.9),int(w*0.9))) image.save(dir2+'/'+i) print (dir1+'/'+i+"已处理，保存为："+dir2+'/'+i)if __name__ == "__main__": dir1 = input("缩小前图片存放目录为：") dir2 = input("缩小后图片存放目录为：") try: os.mkdir(dir2) except Exception: print (Exception) image_small(dir1, dir2) 效果图]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0004:统计文档内的单词个数]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0004.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0004 题：任一个英文的纯文本文件，统计其中的单词出现的个数。 思路 打开文件 利用re模块的findall方法返回为数组的特性，匹配单个单词 统计findall方法返回的数组长度即可。 代码12345678910111213141516171819#coding: utf-8#Auther: wjsaya#**第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。import redef file_open(filename): f = open(filename, 'r').read() #打开文件 ff = re.findall('([a-zA-Z0-9]+)', f) #正则匹配，组内为大小写字母加数字，后面限定位数为一位以上 print (ff) print (len(ff))if __name__ == "__main__": file = input("将要统计的文件为:") file_open(file)根据re模块的findall查找大小写字母加数字，且为1位以上的字符串。因为fingall返回的为数组，因此直接len即可得出个数。 效果图]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0002:生成激活码并存储到mysql数据库]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0002.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0002 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到mysql数据库 代码1234567891011121314151617181920212223242526272829303132333435363738394041#coding: utf-8#第 0002 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。#Auther: wjsayafrom random import choiceimport stringimport pymysql.cursorsdef get_code(dict, length, count):#根据给定字典，长度来得出激活码 for i in range(1,int(count)+1): code = "" #通过count限制激活码个数，循环调用choice来计算激活码 for l in range(0,int(length)): code = code+str(choice(dict)) save_to_mysql(i, code)def save_to_mysql(id, code):#保存到mysql数据库 host = ("192.168.122.18") user = ("root") pass_ = ("123qwe") db = ("active") #设置数据库连接相关信息 connect = pymysql.connect(host, user, pass_, db) cursor = connect.cursor() #链接数据库并设置游标 sql = "insert into activeCode(id, code) VALUES ('%d', '%s')" data = (id, code) cursor.execute(sql % data) #执行sql语句if __name__ == "__main__": dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" get_code(dict, length, count) 效果图]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0000:图片添加数字]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0000.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0000 题：将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果 思路： PIL的Image.open打开图片。 获取图片大小。 调用ImageDraw，在图拍呢的指定位置写下数字。 代码：12345678910111213141516171819202122#coding: utf-8#Auther: wjsaya#**第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果from PIL import Image,ImageFont,ImageDrawdef main(): image = Image.open('./cat.jpg') #打开原图 wight, hight = image.size text = "233" color = (255,0,0) fontsize = wight//8 font = ImageFont.truetype("/usr/share/fonts/wps-office/arial.ttf",fontsize) #设定参数 draw = ImageDraw.Draw(image) draw.text((fontsize*6,0), text, color, font) image.save('./c.jpg', 'jpeg') #保存图片if __name__ == "__main__": main() 效果图：原图：]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python每日一练]--0001:生成激活码]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0001.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？ 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到文件 代码1234567891011121314151617181920212223242526272829303132333435363738#coding: utf-8#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）#Auther: wjsayafrom random import choiceimport stringimport osdef main(): if os.path.exists("./activecode.code"): print ("已经存在activecode.code文件，已经删除") os.remove("./activecode.code") dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" for i in range(0,int(count)): code = get_code(dict, length) with open ('activecode.code', 'a+') as f: f.write(code+'\n') #通过count限制激活码个数，循环调用get_code来计算激活码 def get_code(dict, length): #根据给定字典，长度来得出激活码 code = "" for i in range(0,int(length)): code = code+str(choice(dict)) return code if __name__ == "__main__": main() 效果图]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
+      <tags>
+        <tag>python每日一练</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python爬虫]--爬取豆瓣音乐topX]]></title>
+    <url>%2F%E7%88%AC%E8%99%AB%2Fdouban_music.html</url>
+    <content type="text"><![CDATA[最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/本次内容：从豆瓣的top250音乐界面爬取指定的topX专辑。 思路： 拼接出豆瓣topX页面URL。 用BS去访问和解析豆瓣topX页面URL，获取页面内的所有歌手名和专辑名并拼接，然后输出。 代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#coding: utf-8import reimport requestsfrom bs4 import BeautifulSoupurl = "https://music.douban.com/top250?start=25"firefox=&#123;"User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0 FirePHP/0.7.4"&#125;def main():#主函数，一切的开始，以及变量值获取 maxm = input("想获取豆瓣排名前多少的音乐列表呢？(0-250之间）：") count_main = 0 url_li = get_pages() for i in range(0,9): if count_main &lt; int(maxm): count_main += get_details(url_li[i], count_main, maxm)def get_soup(url):#获取html并解析为BS html = requests.get(url, headers=firefox) soup = BeautifulSoup(html.content, 'lxml') return soupdef get_details(url, count_in_loop, maxm):#获取豆瓣音乐专辑的名称与url链接 content = get_soup(url) html = content.find_all('a', class_="nbg") for i in range(0,25): if count_in_loop &lt; int(maxm): print ("歌手-名字："+html[i]["title"]) print ("链接："+html[i]["href"]) count_in_loop += 1 return count_in_loopdef get_pages():#从豆瓣网页解析出豆瓣下方的下一页标签中的地址列表，此函数可升级为解析下一页url。#或者直接构造豆瓣url地址，?start=XXX即可。 content = get_soup(url) l = content.find("div", class_="paginator") url_li = [] for i in l.find_all('a'): url_li.append(i['href']) return url_li[0:9]if __name__ == '__main__': main() 效果图：]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python爬虫]--从煎蛋网下载图片]]></title>
+    <url>%2F%E7%88%AC%E8%99%AB%2Fjiandan.html</url>
+    <content type="text"><![CDATA[最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/本次内容：从煎蛋网下载图片 思路： 拼接出所需的页面URL。 用BS去访问和解析页面URL，获取页面内的所需图片并保存到本地并重命名。 代码：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677#coding: utf-8import timeimport reimport osimport requestsfrom bs4 import BeautifulSoupurl = 'http://jandan.net/ooxx'firefox = &#123;"User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0 FirePHP/0.7.4"&#125;Pg_count = input("请输入想要获取的页数(直接回车默认页码为1):")if Pg_count == "": Pg_count = "1"Pg_count=int(Pg_count)-1#给get_html函数使用，预先+1上去，这样-1就是当前第一页。def get_content(url):#获取url，返回BS解析之后的content html = requests.get(url, headers=firefox) content = BeautifulSoup(html.content, "lxml") return contentdef get_current_page(content):#获取url，返回url中的current-comment-page（即页码） page_swap1 = content.find('span',class_="current-comment-page") page_swap2 = str(page_swap1) current_page = page_swap2[36:39] #current_page = str(content.find('span',class_="current-comment-page"))[36:39] #此处本来是写成了一句语句直接提取，后来想了想，万一以后想再看下，这会把自己绕晕，于是乎拆分了、、、 return current_pagedef get_img_url(content, max_page):#获取解码后的html文件以及最大页码。获取html中的图片img_url，然后把img_url和最大页码传递给get_img函数。 #html = BeautifulSoup(content, "lxml") img_li = content.find_all("a", class_="view_img_link") for i in img_li: img_url = "http:"+i["href"] #img_url = "http://"+i["href"].strip("/") get_img(img_url, max_page) #strip,用来删除某字符 #并且加上http协议头 def get_img(img_url, floder):#获取img_url和文件夹名（即当前网页页码），通过img_url下载图片并保存在floder内。 img_name = img_url[28:] img_file = requests.get(img_url, headers=firefox) q = img_file.content with open ("./get/"+floder+"/"+img_name, 'wb') as img_file: img_file.write(q) print (floder+"/"+img_name+" is downloaded") def get_html(max_page, Pg_count):#获取最大页码数及想要下载图片的页数，循环得出每页的url地址。 #http://jandan.net/ooxx/page-107#comments while Pg_count &gt;= 0: pg = int(max_page)-Pg_count url = "http://jandan.net/ooxx/page-"+str(pg)+"#comments" print ("当前获取到的包含图片的页面url地址为："+url) Pg_count -= 1 content = get_content(url) print ("开始创建图片存放目录并获取图片链接地址......") if os.path.exists("./get/") == False: os.mkdir ("./get/") if os.path.exists("./get/"+str(pg)) == False: os.mkdir ("./get/"+str(pg)) print ("开始下载图片，本地存放目录为：./get/"+str(pg)) time.sleep(3) get_img_url(content, str(pg)) def main():#主函数，一切的开端 content = get_content(url) current_page = get_current_page(content) get_html(current_page, int(Pg_count)) if __name__ == '__main__': main() 下载过程截图： 恩。。。效果图：]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python爬虫]--调用有道词典进行翻译]]></title>
+    <url>%2F%E7%88%AC%E8%99%AB%2Fyoudao1.html</url>
+    <content type="text"><![CDATA[最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/本次内容:通过有道词典的接口写一个命令行的翻译工具。 思路： 获取用户输入。 通过值构造请求header。 向有道翻译的对应接口发送headers，然后获取返回并取出结果并输出。 代码：12345678910111213141516171819202122232425262728293031323334353637#调用有道词典的web接口进行翻译#coding: utf-8import requestsimport jsondef translate(word=None): url = 'http://fanyi.youdao.com/translate?smartresult=dict&amp;smartresult=rule&amp;smartresult=ugc&amp;sessionFrom=null' key=&#123; 'type':"AUTO", 'i':word, "doctype":"json", "version":"2.1", "keyfrom":"fanyi.web", "ue":"UTF-8", "action":"FY_BY_CLICKBUTTON", "typoResult":"true" &#125; #key这个字典为发送给有道词典服务器的内容，里面的i就是我们需要翻译的内容。此处直接调用word变量。 response = requests.post(url,data=key) return resultdef get_result(li=None): result = json.loads(li.text) print ("输入的词为：%s" % li['translateResult'][0][0]['src']) print ("翻译结果为：%s" % li['translateResult'][0][0]['tgt'])def main: print ("本程序调用有道词典的API进行翻译，可达到以下效果：") print ("外文--&gt;中文") print ("中文--&gt;英文") word = input('请输入你想要翻译的词或句：') list_trans = translate(word) get=get_result(list_trans) if __name__ == '__main__': main() 效果图：]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>py爬虫</tag>
+      </tags>
+  </entry>
+</search>
