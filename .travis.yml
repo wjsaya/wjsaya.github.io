@@ -21,6 +21,7 @@ install:
 
 before_install:
     - export TZ='Asia/Shanghai' # 更改时区
+    - npm cache verify
     - npm install npm -g
     - npm install hexo-cli -g  # 安装hexo环境
 
