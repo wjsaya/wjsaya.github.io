@@ -7,9 +7,7 @@ cache:
     
 # env:
 #     global:
-        # Github Pages
         # - GITHUB_URL: github.com/wjsaya/wjsaya.github.io.git #设置GITHUB_URL
-        # Coding Pages
         # - CODING_URL: git.coding.net/wjsaya/wjsaya.git
 
 branches:
@@ -33,13 +31,8 @@ after_script:
   - sed -i "s/AUTO_GH_TOKEN/${hexo_token}/g" ./_config.yml
   - hexo deploy
   # 不手动执行，直接通过hexo deploy来调用_config.yml发布
-    # - set -ev
+  
     # - git clone https://${GITHUB_URL} .deploy_git
-    # - cd .deploy_git
-    # - git checkout master
-    # - cd ../
-    # - mv .deploy_git/.git/ ./public/
-    # - cd ./public
     # - # add commit timestamp
     # - git add .
     # - git commit -m "Travis CI Auto Build at `date +"%Y-%m-%d %H:%M"`"

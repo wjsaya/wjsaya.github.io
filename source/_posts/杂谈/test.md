@@ -11,7 +11,7 @@ github地址：https://github.com
 <!--more-->
 
 
-测试自动发布
+测试自动发布，测试TravisCI
 ----------
 <b><a href="https://www.wjsaya.top">wjsaya</a></b>  &ensp;  2019/5/19 0:40  &ensp;  于  &ensp;  <b>四川省成都市</b>
 
