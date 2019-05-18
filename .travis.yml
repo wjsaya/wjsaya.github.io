@@ -29,9 +29,9 @@ script:
 
 after_script:
   - sed -i "s/AUTO_GH_TOKEN/${hexo_token}/g" ./_config.yml
-  - hexo deploy
+  - hexo deploy -g
   # 不手动执行，直接通过hexo deploy来调用_config.yml发布
-  
+
     # - git clone https://${GITHUB_URL} .deploy_git
     # - # add commit timestamp
     # - git add .
