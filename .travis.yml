@@ -7,6 +7,7 @@ cache:
     
 env:
     global:
+        # Travis CI系统/docker配置完成后，执行，配置部分环境变量，可以引用TravisCI网页上设置的变量
         - CI_REPO: https://${hexo_token}@github.com/wjsaya/wjsaya.github.io.git
         # - GITHUB_URL: github.com/wjsaya/wjsaya.github.io.git #设置GITHUB_URL
         # - CODING_URL: git.coding.net/wjsaya/wjsaya.git
@@ -16,24 +17,26 @@ branches:
         - hexo # 只监测hexo分支
 
 before_install:
-    - export TZ='Asia/Shanghai' # 更改时区
-    - npm cache verify
-    - npm install npm -g
+    # 安装前执行的脚本
     - npm install hexo-cli -g  # 安装hexo环境
     
 install:
+    # 安装脚本,before_install后执行
     - npm install # 安装hexo及插件
 
 script:
+    # 执行脚本，install后执行
     - hexo clean # 清除
     # - hexo generate # 生成
 
 after_script:
+    # script后执行
 #   - sed -i "s/AUTO_GH_TOKEN/${hexo_token}/g" ./_config.yml
-  - sed -i "s/repo:.*/$repo:\ {CI_REPO}/g" ./_config.yml
+  - sed -i "s/repo:.*/$repo:\ ${CI_REPO}/g" ./_config.yml
   - hexo deploy -g
   # 不手动执行，直接通过hexo deploy来调用_config.yml发布
 
+  # 可同时发布到github和coding
     # - git clone https://${GITHUB_URL} .deploy_git
     # - # add commit timestamp
     # - git add .
