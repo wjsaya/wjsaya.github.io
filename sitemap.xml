@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wjsaya.github.io/%E6%9D%82%E8%B0%88/test.html</loc>
+    
+    <lastmod>2019-05-18T16:40:51.013Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wjsaya.github.io/%E6%9D%82%E8%B0%88/second_years.html</loc>
+    
+    <lastmod>2019-05-18T16:40:15.197Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wjsaya.github.io/about/index.html</loc>
     
     <lastmod>2018-09-03T09:25:24.276Z</lastmod>
@@ -124,13 +138,6 @@
     <loc>https://wjsaya.github.io/hexo/some_upgrade.html</loc>
     
     <lastmod>2018-08-12T04:14:39.771Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wjsaya.github.io/%E6%9D%82%E8%B0%88/second_years.html</loc>
-    
-    <lastmod>2018-07-14T15:21:26.121Z</lastmod>
     
   </url>
   

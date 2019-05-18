@@ -65,9 +65,21 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[[随笔一写]--test auto deploy]]></title>
+    <url>%2F%E6%9D%82%E8%B0%88%2Ftest.html</url>
+    <content type="text"><![CDATA[test auto deploy个人博客地址：https://www.wjsaya.topgithub地址：https://github.com 测试自动发布wjsaya &ensp; 2019/5/19 0:40 &ensp; 于 &ensp; 四川省成都市]]></content>
+      <categories>
+        <category>其他</category>
+        <category>随笔一写</category>
+      </categories>
+      <tags>
+        <tag>随笔一写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[[随笔一写]--在本科的第二年前]]></title>
     <url>%2F%E6%9D%82%E8%B0%88%2Fsecond_years.html</url>
-    <content type="text"><![CDATA[记在川师的第二年前个人博客地址：https://www.wjsaya.topgithub地址：https://github.com/wjsaya/python_spider_learn/ &emsp;&emsp;到川师一年了。一年过去，和去年入学的我，有哪些不同呢？一年间，曾经鄙视编程的我，现在也学习了C，java，python。甚至去自学了qt；去年12月考四级心惊胆战，最终也还是过线了,虽然成绩很惨（495）。 &emsp;&emsp;不得不承认，开发在IT行业依然是最重要的一块，曾经的我看的十分浅显：写代码？那是程序员的事情。我不用关心，我是运维，我管好服务器就好。当初并没有意识到，编程仅仅是一项技能，它不是绑定在开发身上的属性，编程对于开发，正如linux对于运维，都是吃饭的家伙。但是正如开发需要了解常见服务的搭建方法(不然每次测试都找运维?)，运维当然也需要掌握开发技能（写个自动化巡检脚本都要找开发帮忙？），不会开发的运维，总是不如会开发的运维那般吃香。做事效率以及思考方式也会有很大差别。诚然，作为运维不需要如开发般熟悉开发，但是人总不能把自己限定太死。曾经的我画地为牢，我**就是个运维，不需要想那么多有的没的。但是当今的形式，不会开发的纯运维又能滋润多久？换句话说，做IT这一行，不会开发，那你能够做多久？By the way: 我这样自学了下C的人，居然还在蓝桥杯拿了个省三等奖，可见蓝桥杯水分233 &emsp;&emsp;对于普通大学生活，我是万万没想到四级能够过关，毕竟专科三年间就上了两学期英语课，除去上课就没碰过英语。想想去年四级考试前的准备过程：天天背单词，两天一次听力，一天两篇阅读，想来还是很有用的。。。作文翻译没看，看了可能 分数高点 也就那样儿。 &emsp;&emsp;总之一年过去了，仿佛一切又回到了原点。和一年前的我，我有什么变化？好像也没啥变化。。。依然是菜鸡一只2333 &emsp;&emsp;最后回顾一下曾经的小计划： 高数英语弄起走：没办法，即使再艰难，课也得上啊； 每周七天，除开不可抗力，保证晚上跑步三次，每次4-5km左右：身体才是革命的本钱，健壮的体魄才能撑起这并不怎么健硕的大脑； 在这之外呢，嘛。。。人生苦短，我学python。。。 1, 高数没挂，英语四级过关（495），恩，勉强完成任务！ 2, 关于这点，我可以骄傲的说我完成啦！每次跑步都是5km。&ensp;&ensp;据我的悦跑圈记录，2017年总跑量245.70KM，2018年目前总跑量180.18KM。 3, 这一点。。。嘛，继续继续。 wjsaya &ensp; 2018/7/14 22:24 &ensp; 于 &ensp; 四川省成都市]]></content>
+    <content type="text"><![CDATA[记在川师的第二年前个人博客地址：https://www.wjsaya.topgithub地址：https://github.com/wjsaya/ &emsp;&emsp;到川师一年了。一年过去，和去年入学的我，有哪些不同呢？一年间，曾经鄙视编程的我，现在也学习了C，java，python。甚至去自学了qt；去年12月考四级心惊胆战，最终也还是过线了,虽然成绩很惨（495）。 &emsp;&emsp;不得不承认，开发在IT行业依然是最重要的一块，曾经的我看的十分浅显：写代码？那是程序员的事情。我不用关心，我是运维，我管好服务器就好。当初并没有意识到，编程仅仅是一项技能，它不是绑定在开发身上的属性，编程对于开发，正如linux对于运维，都是吃饭的家伙。但是正如开发需要了解常见服务的搭建方法(不然每次测试都找运维?)，运维当然也需要掌握开发技能（写个自动化巡检脚本都要找开发帮忙？），不会开发的运维，总是不如会开发的运维那般吃香。做事效率以及思考方式也会有很大差别。诚然，作为运维不需要如开发般熟悉开发，但是人总不能把自己限定太死。曾经的我画地为牢，我**就是个运维，不需要想那么多有的没的。但是当今的形式，不会开发的纯运维又能滋润多久？换句话说，做IT这一行，不会开发，那你能够做多久？By the way: 我这样自学了下C的人，居然还在蓝桥杯拿了个省三等奖，可见蓝桥杯水分233 &emsp;&emsp;对于普通大学生活，我是万万没想到四级能够过关，毕竟专科三年间就上了两学期英语课，除去上课就没碰过英语。想想去年四级考试前的准备过程：天天背单词，两天一次听力，一天两篇阅读，想来还是很有用的。。。作文翻译没看，看了可能 分数高点 也就那样儿。 &emsp;&emsp;总之一年过去了，仿佛一切又回到了原点。和一年前的我，我有什么变化？好像也没啥变化。。。依然是菜鸡一只2333 &emsp;&emsp;最后回顾一下曾经的小计划： 高数英语弄起走：没办法，即使再艰难，课也得上啊； 每周七天，除开不可抗力，保证晚上跑步三次，每次4-5km左右：身体才是革命的本钱，健壮的体魄才能撑起这并不怎么健硕的大脑； 在这之外呢，嘛。。。人生苦短，我学python。。。 1, 高数没挂，英语四级过关（495），恩，勉强完成任务！ 2, 关于这点，我可以骄傲的说我完成啦！每次跑步都是5km。&ensp;&ensp;据我的悦跑圈记录，2017年总跑量245.70KM，2018年目前总跑量180.18KM。 3, 这一点。。。嘛，继续继续。 wjsaya &ensp; 2018/7/14 22:24 &ensp; 于 &ensp; 四川省成都市]]></content>
       <categories>
         <category>其他</category>
         <category>随笔一写</category>
@@ -154,9 +166,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[[python每日一练]--0003:统计文档内的单词个数并存放到redis数据库]]></title>
-    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0003.html</url>
-    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0003 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到redis数据库 代码12345678910111213141516171819202122232425262728293031323334#coding: utf-8#**第 0003 题：**将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。#Auther: wjsayafrom random import choiceimport stringimport redisdef get_code(dict, length, count):#根据给定字典，长度来得出激活码 for i in range(1,int(count)+1): code = "" #通过count限制激活码个数，循环调用choice来计算激活码 for l in range(0,int(length)): code = code+str(choice(dict)) save_to_redis(count, code)def save_to_redis(max, value): #保存到redis数据库 redisdb = redis.Redis(host='10.2.2.131',port=6379,db=0) redisdb.lpush('active_code',value) redisdb.lrange('active_code',0,max) redisdb.save()if __name__ == "__main__": dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" get_code(dict, length, count) 效果图]]></content>
+    <title><![CDATA[[python每日一练]--0005:把图片大小控制在iphone5的分辨率以下]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0005.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0005 题：你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。 思路 通过OS库的listdir列出所有图片； 然后通过PIL库的Image.open打开图片并获取图片大小； 最后进入一个死循环：通过PIL库的Image.resize来缩小图片为原图片的90%，直到图片大小小于iphone5的分辨率大小，退出循环。 代码123456789101112131415161718192021222324252627282930#coding: utf-8#Auther: wjsaya#**第 0005 题：**你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。import osfrom PIL import Imagedef image_small(dir1, dir2): list = os.listdir(dir1) for i in list: image = Image.open(dir1+'/'+i) while True: h,w = image.size #获取图片原始大小,然后进死循环，不停缩小图片为原来的90%，直到大小缩小为iphone5所支持的分辨率。 if h &lt; 1136: #iphone5分辨率为1136x640 if w &lt; 640: break image = image.resize((int(h*0.9),int(w*0.9))) image.save(dir2+'/'+i) print (dir1+'/'+i+"已处理，保存为："+dir2+'/'+i)if __name__ == "__main__": dir1 = input("缩小前图片存放目录为：") dir2 = input("缩小后图片存放目录为：") try: os.mkdir(dir2) except Exception: print (Exception) image_small(dir1, dir2) 效果图]]></content>
       <categories>
         <category>编程</category>
         <category>python</category>
@@ -167,9 +179,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[[python每日一练]--0005:把图片大小控制在iphone5的分辨率以下]]></title>
-    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0005.html</url>
-    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0005 题：你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。 思路 通过OS库的listdir列出所有图片； 然后通过PIL库的Image.open打开图片并获取图片大小； 最后进入一个死循环：通过PIL库的Image.resize来缩小图片为原图片的90%，直到图片大小小于iphone5的分辨率大小，退出循环。 代码123456789101112131415161718192021222324252627282930#coding: utf-8#Auther: wjsaya#**第 0005 题：**你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。import osfrom PIL import Imagedef image_small(dir1, dir2): list = os.listdir(dir1) for i in list: image = Image.open(dir1+'/'+i) while True: h,w = image.size #获取图片原始大小,然后进死循环，不停缩小图片为原来的90%，直到大小缩小为iphone5所支持的分辨率。 if h &lt; 1136: #iphone5分辨率为1136x640 if w &lt; 640: break image = image.resize((int(h*0.9),int(w*0.9))) image.save(dir2+'/'+i) print (dir1+'/'+i+"已处理，保存为："+dir2+'/'+i)if __name__ == "__main__": dir1 = input("缩小前图片存放目录为：") dir2 = input("缩小后图片存放目录为：") try: os.mkdir(dir2) except Exception: print (Exception) image_small(dir1, dir2) 效果图]]></content>
+    <title><![CDATA[[python每日一练]--0003:统计文档内的单词个数并存放到redis数据库]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0003.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0003 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到redis数据库 代码12345678910111213141516171819202122232425262728293031323334#coding: utf-8#**第 0003 题：**将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。#Auther: wjsayafrom random import choiceimport stringimport redisdef get_code(dict, length, count):#根据给定字典，长度来得出激活码 for i in range(1,int(count)+1): code = "" #通过count限制激活码个数，循环调用choice来计算激活码 for l in range(0,int(length)): code = code+str(choice(dict)) save_to_redis(count, code)def save_to_redis(max, value): #保存到redis数据库 redisdb = redis.Redis(host='10.2.2.131',port=6379,db=0) redisdb.lpush('active_code',value) redisdb.lrange('active_code',0,max) redisdb.save()if __name__ == "__main__": dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" get_code(dict, length, count) 效果图]]></content>
       <categories>
         <category>编程</category>
         <category>python</category>
