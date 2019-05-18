@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wjsaya.github.io/"/>
-  <updated>2018-08-16T03:16:25.652Z</updated>
+  <updated>2019-05-18T17:03:30.772Z</updated>
   <id>https://wjsaya.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[随笔一写]--test auto deploy</title>
+    <link href="https://wjsaya.github.io/%E6%9D%82%E8%B0%88/test.html"/>
+    <id>https://wjsaya.github.io/杂谈/test.html</id>
+    <published>2019-05-18T16:00:00.000Z</published>
+    <updated>2019-05-18T17:03:30.772Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>test auto deploy<br>个人博客地址：<a href="https://www.wjsaya.top" target="_blank" rel="external">https://www.wjsaya.top</a><br>github地址：<a href="https://github.com" target="_blank" rel="external">https://github.com</a><br><a id="more"></a></p>
+</blockquote>
+<h2 id="测试自动发布"><a href="#测试自动发布" class="headerlink" title="测试自动发布"></a>测试自动发布</h2><p><b><a href="https://www.wjsaya.top" target="_blank" rel="external">wjsaya</a></b>  &ensp;  2019/5/19 0:40  &ensp;  于  &ensp;  <b>四川省成都市</b></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;test auto deploy&lt;br&gt;个人博客地址：&lt;a href=&quot;https://www.wjsaya.top&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.wjsaya.top&lt;/a&gt;&lt;br&gt;github地址：&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="其他" scheme="https://wjsaya.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+      <category term="随笔一写" scheme="https://wjsaya.github.io/categories/%E5%85%B6%E4%BB%96/%E9%9A%8F%E7%AC%94%E4%B8%80%E5%86%99/"/>
+    
+    
+      <category term="随笔一写" scheme="https://wjsaya.github.io/tags/%E9%9A%8F%E7%AC%94%E4%B8%80%E5%86%99/"/>
+    
+  </entry>
   
   <entry>
     <title>[python每日一练]--0013:爬百度贴吧图片</title>
@@ -351,35 +380,6 @@
   </entry>
   
   <entry>
-    <title>[随笔一写]--test auto deploy</title>
-    <link href="https://wjsaya.github.io/%E6%9D%82%E8%B0%88/test.html"/>
-    <id>https://wjsaya.github.io/杂谈/test.html</id>
-    <published>2018-07-13T16:00:00.000Z</published>
-    <updated>2019-05-18T16:40:51.013Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>test auto deploy<br>个人博客地址：<a href="https://www.wjsaya.top" target="_blank" rel="external">https://www.wjsaya.top</a><br>github地址：<a href="https://github.com" target="_blank" rel="external">https://github.com</a><br><a id="more"></a></p>
-</blockquote>
-<h2 id="测试自动发布"><a href="#测试自动发布" class="headerlink" title="测试自动发布"></a>测试自动发布</h2><p><b><a href="https://www.wjsaya.top" target="_blank" rel="external">wjsaya</a></b>  &ensp;  2019/5/19 0:40  &ensp;  于  &ensp;  <b>四川省成都市</b></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;test auto deploy&lt;br&gt;个人博客地址：&lt;a href=&quot;https://www.wjsaya.top&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.wjsaya.top&lt;/a&gt;&lt;br&gt;github地址：&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="其他" scheme="https://wjsaya.github.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-      <category term="随笔一写" scheme="https://wjsaya.github.io/categories/%E5%85%B6%E4%BB%96/%E9%9A%8F%E7%AC%94%E4%B8%80%E5%86%99/"/>
-    
-    
-      <category term="随笔一写" scheme="https://wjsaya.github.io/tags/%E9%9A%8F%E7%AC%94%E4%B8%80%E5%86%99/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[随笔一写]--在本科的第二年前</title>
     <link href="https://wjsaya.github.io/%E6%9D%82%E8%B0%88/second_years.html"/>
     <id>https://wjsaya.github.io/杂谈/second_years.html</id>
@@ -668,46 +668,6 @@
   </entry>
   
   <entry>
-    <title>[python每日一练]--0005:把图片大小控制在iphone5的分辨率以下</title>
-    <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0005.html"/>
-    <id>https://wjsaya.github.io/python每日一练/0005.html</id>
-    <published>2017-06-20T16:00:00.000Z</published>
-    <updated>2018-08-16T03:33:27.150Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0005 题：</strong>你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。<br><a id="more"></a></p>
-</blockquote>
-<hr>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li>通过OS库的listdir列出所有图片；</li>
-<li>然后通过PIL库的Image.open打开图片并获取图片大小；</li>
-<li>最后进入一个死循环：通过PIL库的Image.resize来缩小图片为原图片的90%，直到图片大小小于iphone5的分辨率大小，退出循环。</li>
-</ol>
-<hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="comment">#**第 0005 题：**你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。</span></div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">image_small</span><span class="params">(dir1, dir2)</span>:</span></div><div class="line">    list = os.listdir(dir1)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> list:</div><div class="line">        image = Image.open(dir1+<span class="string">'/'</span>+i)</div><div class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">            h,w = image.size</div><div class="line">            <span class="comment">#获取图片原始大小,然后进死循环，不停缩小图片为原来的90%，直到大小缩小为iphone5所支持的分辨率。</span></div><div class="line">            <span class="keyword">if</span> h &lt; <span class="number">1136</span>:</div><div class="line">            <span class="comment">#iphone5分辨率为1136x640</span></div><div class="line">                <span class="keyword">if</span> w &lt; <span class="number">640</span>:</div><div class="line">                    <span class="keyword">break</span></div><div class="line">            image = image.resize((int(h*<span class="number">0.9</span>),int(w*<span class="number">0.9</span>)))</div><div class="line">        image.save(dir2+<span class="string">'/'</span>+i)</div><div class="line">        <span class="keyword">print</span> (dir1+<span class="string">'/'</span>+i+<span class="string">"已处理，保存为："</span>+dir2+<span class="string">'/'</span>+i)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    dir1 = input(<span class="string">"缩小前图片存放目录为："</span>)</div><div class="line">    dir2 = input(<span class="string">"缩小后图片存放目录为："</span>)</div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        os.mkdir(dir2)</div><div class="line">    <span class="keyword">except</span> Exception:</div><div class="line">        <span class="keyword">print</span> (Exception)</div><div class="line">    image_small(dir1, dir2)</div></pre></td></tr></table></figure>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://raw.githubusercontent.com/wjsaya/BlogPictures/master/0005-1.png" alt="0005-1"></p>
-<p><img src="https://raw.githubusercontent.com/wjsaya/BlogPictures/master/0005-2.png" alt="0005-2"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-Me-the-Code/show-me-the-code&lt;/a&gt;&lt;br&gt;我的github链接：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&lt;/a&gt;&lt;br&gt;&lt;strong&gt;第 0005 题：&lt;/strong&gt;你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
-    
-      <category term="python每日一练" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
-    
-    
-      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[python每日一练]--0003:统计文档内的单词个数并存放到redis数据库</title>
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0003.html"/>
     <id>https://wjsaya.github.io/python每日一练/0003.html</id>
@@ -735,6 +695,46 @@
       &lt;blockquote&gt;
 &lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-Me-the-Code/show-me-the-code&lt;/a&gt;&lt;br&gt;我的github链接：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&lt;/a&gt;&lt;br&gt;&lt;strong&gt;第 0003 题：&lt;/strong&gt;将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。&lt;/p&gt;
 &lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[python每日一练]--0005:把图片大小控制在iphone5的分辨率以下</title>
+    <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0005.html"/>
+    <id>https://wjsaya.github.io/python每日一练/0005.html</id>
+    <published>2017-06-20T16:00:00.000Z</published>
+    <updated>2018-08-16T03:33:27.150Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0005 题：</strong>你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。<br><a id="more"></a></p>
+</blockquote>
+<hr>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
+<li>通过OS库的listdir列出所有图片；</li>
+<li>然后通过PIL库的Image.open打开图片并获取图片大小；</li>
+<li>最后进入一个死循环：通过PIL库的Image.resize来缩小图片为原图片的90%，直到图片大小小于iphone5的分辨率大小，退出循环。</li>
+</ol>
+<hr>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="comment">#**第 0005 题：**你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。</span></div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">image_small</span><span class="params">(dir1, dir2)</span>:</span></div><div class="line">    list = os.listdir(dir1)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> list:</div><div class="line">        image = Image.open(dir1+<span class="string">'/'</span>+i)</div><div class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">            h,w = image.size</div><div class="line">            <span class="comment">#获取图片原始大小,然后进死循环，不停缩小图片为原来的90%，直到大小缩小为iphone5所支持的分辨率。</span></div><div class="line">            <span class="keyword">if</span> h &lt; <span class="number">1136</span>:</div><div class="line">            <span class="comment">#iphone5分辨率为1136x640</span></div><div class="line">                <span class="keyword">if</span> w &lt; <span class="number">640</span>:</div><div class="line">                    <span class="keyword">break</span></div><div class="line">            image = image.resize((int(h*<span class="number">0.9</span>),int(w*<span class="number">0.9</span>)))</div><div class="line">        image.save(dir2+<span class="string">'/'</span>+i)</div><div class="line">        <span class="keyword">print</span> (dir1+<span class="string">'/'</span>+i+<span class="string">"已处理，保存为："</span>+dir2+<span class="string">'/'</span>+i)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    dir1 = input(<span class="string">"缩小前图片存放目录为："</span>)</div><div class="line">    dir2 = input(<span class="string">"缩小后图片存放目录为："</span>)</div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        os.mkdir(dir2)</div><div class="line">    <span class="keyword">except</span> Exception:</div><div class="line">        <span class="keyword">print</span> (Exception)</div><div class="line">    image_small(dir1, dir2)</div></pre></td></tr></table></figure>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://raw.githubusercontent.com/wjsaya/BlogPictures/master/0005-1.png" alt="0005-1"></p>
+<p><img src="https://raw.githubusercontent.com/wjsaya/BlogPictures/master/0005-2.png" alt="0005-2"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-Me-the-Code/show-me-the-code&lt;/a&gt;&lt;br&gt;我的github链接：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&lt;/a&gt;&lt;br&gt;&lt;strong&gt;第 0005 题：&lt;/strong&gt;你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。&lt;br&gt;
     
     </summary>
     
@@ -831,6 +831,47 @@
   </entry>
   
   <entry>
+    <title>[python每日一练]--0001:生成激活码</title>
+    <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0001.html"/>
+    <id>https://wjsaya.github.io/python每日一练/0001.html</id>
+    <published>2017-06-15T16:00:00.000Z</published>
+    <updated>2018-08-16T03:39:55.763Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0001 题：</strong>做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
+<li>循环，在count条件内调用length的循环来生成key。</li>
+<li>内循环，length条件下随机生成一个字符并追加到code变量。</li>
+<li>得到一个key之后，保存到文件</li>
+</ol>
+<hr>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="keyword">from</span> random <span class="keyword">import</span> choice</div><div class="line"><span class="keyword">import</span> string</div><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">if</span> os.path.exists(<span class="string">"./activecode.code"</span>):</div><div class="line">        <span class="keyword">print</span> (<span class="string">"已经存在activecode.code文件，已经删除"</span>)</div><div class="line">        os.remove(<span class="string">"./activecode.code"</span>)</div><div class="line"></div><div class="line">    dict = string.ascii_letters[:]</div><div class="line">    <span class="comment">#设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></div><div class="line">    count = input(<span class="string">"请输入激活码个数："</span>)</div><div class="line">    <span class="keyword">if</span> count == <span class="string">""</span>:</div><div class="line">        count = <span class="string">"1"</span></div><div class="line">    </div><div class="line">    length = input(<span class="string">"请输入激活码长度："</span>)</div><div class="line">    <span class="keyword">if</span> length == <span class="string">""</span>:</div><div class="line">        length = <span class="string">"8"</span></div><div class="line">   </div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,int(count)):</div><div class="line">        code = get_code(dict, length)</div><div class="line">        <span class="keyword">with</span> open (<span class="string">'activecode.code'</span>, <span class="string">'a+'</span>) <span class="keyword">as</span> f:</div><div class="line">            f.write(code+<span class="string">'\n'</span>)</div><div class="line">    <span class="comment">#通过count限制激活码个数，循环调用get_code来计算激活码 </span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_code</span><span class="params">(dict, length)</span>:</span></div><div class="line">    <span class="comment">#根据给定字典，长度来得出激活码</span></div><div class="line">    code = <span class="string">""</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,int(length)):</div><div class="line">        code = code+str(choice(dict))</div><div class="line">    <span class="keyword">return</span> code</div><div class="line"> </div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://raw.githubusercontent.com/wjsaya/BlogPictures/master/0001.png" alt="0001"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-Me-the-Code/show-me-the-code&lt;/a&gt;&lt;br&gt;我的github链接：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&lt;/a&gt;&lt;br&gt;&lt;strong&gt;第 0001 题：&lt;/strong&gt;做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
+    
+    
+      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[python每日一练]--0000:图片添加数字</title>
     <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0000.html"/>
     <id>https://wjsaya.github.io/python每日一练/0000.html</id>
@@ -873,70 +914,30 @@
   </entry>
   
   <entry>
-    <title>[python每日一练]--0001:生成激活码</title>
-    <link href="https://wjsaya.github.io/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/0001.html"/>
-    <id>https://wjsaya.github.io/python每日一练/0001.html</id>
-    <published>2017-06-15T16:00:00.000Z</published>
-    <updated>2018-08-16T03:39:55.763Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>题目链接：<a href="https://github.com/Show-Me-the-Code/show-me-the-code" target="_blank" rel="external">https://github.com/Show-Me-the-Code/show-me-the-code</a><br>我的github链接：<a href="https://github.com/wjsaya/python_spider_learn/tree/master/python_daily" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/tree/master/python_daily</a><br><strong>第 0001 题：</strong>做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li>循环，在count条件内调用length的循环来生成key。</li>
-<li>内循环，length条件下随机生成一个字符并追加到code变量。</li>
-<li>得到一个key之后，保存到文件</li>
-</ol>
-<hr>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="comment">#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）</span></div><div class="line"><span class="comment">#Auther: wjsaya</span></div><div class="line"><span class="keyword">from</span> random <span class="keyword">import</span> choice</div><div class="line"><span class="keyword">import</span> string</div><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">if</span> os.path.exists(<span class="string">"./activecode.code"</span>):</div><div class="line">        <span class="keyword">print</span> (<span class="string">"已经存在activecode.code文件，已经删除"</span>)</div><div class="line">        os.remove(<span class="string">"./activecode.code"</span>)</div><div class="line"></div><div class="line">    dict = string.ascii_letters[:]</div><div class="line">    <span class="comment">#设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></div><div class="line">    count = input(<span class="string">"请输入激活码个数："</span>)</div><div class="line">    <span class="keyword">if</span> count == <span class="string">""</span>:</div><div class="line">        count = <span class="string">"1"</span></div><div class="line">    </div><div class="line">    length = input(<span class="string">"请输入激活码长度："</span>)</div><div class="line">    <span class="keyword">if</span> length == <span class="string">""</span>:</div><div class="line">        length = <span class="string">"8"</span></div><div class="line">   </div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,int(count)):</div><div class="line">        code = get_code(dict, length)</div><div class="line">        <span class="keyword">with</span> open (<span class="string">'activecode.code'</span>, <span class="string">'a+'</span>) <span class="keyword">as</span> f:</div><div class="line">            f.write(code+<span class="string">'\n'</span>)</div><div class="line">    <span class="comment">#通过count限制激活码个数，循环调用get_code来计算激活码 </span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_code</span><span class="params">(dict, length)</span>:</span></div><div class="line">    <span class="comment">#根据给定字典，长度来得出激活码</span></div><div class="line">    code = <span class="string">""</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,int(length)):</div><div class="line">        code = code+str(choice(dict))</div><div class="line">    <span class="keyword">return</span> code</div><div class="line"> </div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="https://raw.githubusercontent.com/wjsaya/BlogPictures/master/0001.png" alt="0001"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;题目链接：&lt;a href=&quot;https://github.com/Show-Me-the-Code/show-me-the-code&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Show-Me-the-Code/show-me-the-code&lt;/a&gt;&lt;br&gt;我的github链接：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/tree/master/python_daily&lt;/a&gt;&lt;br&gt;&lt;strong&gt;第 0001 题：&lt;/strong&gt;做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="python" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
-    
-      <category term="python每日一练" scheme="https://wjsaya.github.io/categories/%E7%BC%96%E7%A8%8B/python/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
-    
-    
-      <category term="python每日一练" scheme="https://wjsaya.github.io/tags/python%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[python爬虫]--爬取豆瓣音乐topX</title>
-    <link href="https://wjsaya.github.io/%E7%88%AC%E8%99%AB/douban_music.html"/>
-    <id>https://wjsaya.github.io/爬虫/douban_music.html</id>
+    <title>[python爬虫]--从煎蛋网下载图片</title>
+    <link href="https://wjsaya.github.io/%E7%88%AC%E8%99%AB/jiandan.html"/>
+    <id>https://wjsaya.github.io/爬虫/jiandan.html</id>
     <published>2017-06-14T16:00:00.000Z</published>
-    <updated>2018-08-16T04:08:23.871Z</updated>
+    <updated>2018-08-16T04:08:12.080Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。<br>github地址：<a href="https://github.com/wjsaya/python_spider_learn/" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/</a><br>本次内容：从豆瓣的top250音乐界面爬取指定的topX专辑。<br><a id="more"></a></p>
+<p>最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。<br>github地址：<a href="https://github.com/wjsaya/python_spider_learn/" target="_blank" rel="external">https://github.com/wjsaya/python_spider_learn/</a><br>本次内容：从煎蛋网下载图片<br><a id="more"></a></p>
 </blockquote>
 <hr>
 <h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><ol>
-<li>拼接出豆瓣topX页面URL。</li>
-<li>用BS去访问和解析豆瓣topX页面URL，获取页面内的所有歌手名和专辑名并拼接，然后输出。</li>
+<li>拼接出所需的页面URL。</li>
+<li>用BS去访问和解析页面URL，获取页面内的所需图片并保存到本地并重命名。</li>
 </ol>
 <hr>
-<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div><div class="line"></div><div class="line">url = <span class="string">"https://music.douban.com/top250?start=25"</span></div><div class="line">firefox=&#123;<span class="string">"User-Agent"</span>:<span class="string">"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0 FirePHP/0.7.4"</span>&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line"><span class="comment">#主函数，一切的开始，以及变量值获取</span></div><div class="line">    maxm = input(<span class="string">"想获取豆瓣排名前多少的音乐列表呢？(0-250之间）："</span>)</div><div class="line">    count_main = <span class="number">0</span></div><div class="line">    url_li = get_pages()</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">9</span>):</div><div class="line">        <span class="keyword">if</span> count_main &lt; int(maxm):</div><div class="line">            count_main += get_details(url_li[i], count_main, maxm)</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_soup</span><span class="params">(url)</span>:</span></div><div class="line"><span class="comment">#获取html并解析为BS</span></div><div class="line">    html = requests.get(url, headers=firefox)</div><div class="line">    soup = BeautifulSoup(html.content, <span class="string">'lxml'</span>)</div><div class="line">    <span class="keyword">return</span> soup</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_details</span><span class="params">(url, count_in_loop, maxm)</span>:</span></div><div class="line"><span class="comment">#获取豆瓣音乐专辑的名称与url链接</span></div><div class="line">    content = get_soup(url)</div><div class="line">    html = content.find_all(<span class="string">'a'</span>, class_=<span class="string">"nbg"</span>)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">25</span>):</div><div class="line">        <span class="keyword">if</span> count_in_loop &lt; int(maxm):</div><div class="line">            <span class="keyword">print</span> (<span class="string">"歌手-名字："</span>+html[i][<span class="string">"title"</span>])</div><div class="line">            <span class="keyword">print</span> (<span class="string">"链接："</span>+html[i][<span class="string">"href"</span>])</div><div class="line">        count_in_loop += <span class="number">1</span></div><div class="line">    <span class="keyword">return</span> count_in_loop</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_pages</span><span class="params">()</span>:</span></div><div class="line"><span class="comment">#从豆瓣网页解析出豆瓣下方的下一页标签中的地址列表，此函数可升级为解析下一页url。</span></div><div class="line"><span class="comment">#或者直接构造豆瓣url地址，?start=XXX即可。</span></div><div class="line">    content = get_soup(url)</div><div class="line">    l = content.find(<span class="string">"div"</span>, class_=<span class="string">"paginator"</span>)</div><div class="line">    url_li = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> l.find_all(<span class="string">'a'</span>):</div><div class="line">        url_li.append(i[<span class="string">'href'</span>])</div><div class="line">    <span class="keyword">return</span> url_li[<span class="number">0</span>:<span class="number">9</span>]</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
-<h2 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h2><p><img src="https://raw.githubusercontent.com/wjsaya/BlogPictures/master/douban_music.png" alt="douban_music"></p>
+<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div><div class="line"></div><div class="line">url = <span class="string">'http://jandan.net/ooxx'</span></div><div class="line">firefox = &#123;<span class="string">"User-Agent"</span>:<span class="string">"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0 FirePHP/0.7.4"</span>&#125;</div><div class="line">Pg_count = input(<span class="string">"请输入想要获取的页数(直接回车默认页码为1):"</span>)</div><div class="line"><span class="keyword">if</span> Pg_count == <span class="string">""</span>:</div><div class="line">    Pg_count = <span class="string">"1"</span></div><div class="line">Pg_count=int(Pg_count)<span class="number">-1</span></div><div class="line"><span class="comment">#给get_html函数使用，预先+1上去，这样-1就是当前第一页。</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_content</span><span class="params">(url)</span>:</span></div><div class="line"><span class="comment">#获取url，返回BS解析之后的content</span></div><div class="line">    html = requests.get(url, headers=firefox)</div><div class="line">    content = BeautifulSoup(html.content, <span class="string">"lxml"</span>)</div><div class="line">    <span class="keyword">return</span> content</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_current_page</span><span class="params">(content)</span>:</span></div><div class="line"><span class="comment">#获取url，返回url中的current-comment-page（即页码）</span></div><div class="line">    page_swap1 = content.find(<span class="string">'span'</span>,class_=<span class="string">"current-comment-page"</span>)</div><div class="line">    page_swap2 = str(page_swap1)</div><div class="line">    current_page = page_swap2[<span class="number">36</span>:<span class="number">39</span>]</div><div class="line">    <span class="comment">#current_page = str(content.find('span',class_="current-comment-page"))[36:39]</span></div><div class="line">    <span class="comment">#此处本来是写成了一句语句直接提取，后来想了想，万一以后想再看下，这会把自己绕晕，于是乎拆分了、、、</span></div><div class="line">    <span class="keyword">return</span> current_page</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_img_url</span><span class="params">(content, max_page)</span>:</span></div><div class="line"><span class="comment">#获取解码后的html文件以及最大页码。获取html中的图片img_url，然后把img_url和最大页码传递给get_img函数。</span></div><div class="line">    <span class="comment">#html = BeautifulSoup(content, "lxml")</span></div><div class="line">    img_li = content.find_all(<span class="string">"a"</span>, class_=<span class="string">"view_img_link"</span>)</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> img_li:</div><div class="line">        img_url = <span class="string">"http:"</span>+i[<span class="string">"href"</span>]</div><div class="line">        <span class="comment">#img_url = "http://"+i["href"].strip("/")</span></div><div class="line">        get_img(img_url, max_page)</div><div class="line">        <span class="comment">#strip,用来删除某字符</span></div><div class="line">        <span class="comment">#并且加上http协议头</span></div><div class="line">        </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_img</span><span class="params">(img_url, floder)</span>:</span></div><div class="line"><span class="comment">#获取img_url和文件夹名（即当前网页页码），通过img_url下载图片并保存在floder内。</span></div><div class="line">    img_name = img_url[<span class="number">28</span>:]</div><div class="line">    img_file = requests.get(img_url, headers=firefox)</div><div class="line">    q = img_file.content</div><div class="line">    <span class="keyword">with</span> open (<span class="string">"./get/"</span>+floder+<span class="string">"/"</span>+img_name, <span class="string">'wb'</span>) <span class="keyword">as</span> img_file:</div><div class="line">        img_file.write(q)</div><div class="line">        <span class="keyword">print</span> (floder+<span class="string">"/"</span>+img_name+<span class="string">" is downloaded"</span>)</div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_html</span><span class="params">(max_page, Pg_count)</span>:</span></div><div class="line"><span class="comment">#获取最大页码数及想要下载图片的页数，循环得出每页的url地址。</span></div><div class="line">    <span class="comment">#http://jandan.net/ooxx/page-107#comments</span></div><div class="line">    <span class="keyword">while</span> Pg_count &gt;= <span class="number">0</span>:</div><div class="line">        pg = int(max_page)-Pg_count</div><div class="line">        url = <span class="string">"http://jandan.net/ooxx/page-"</span>+str(pg)+<span class="string">"#comments"</span></div><div class="line">        <span class="keyword">print</span> (<span class="string">"当前获取到的包含图片的页面url地址为："</span>+url)</div><div class="line">        Pg_count -= <span class="number">1</span></div><div class="line">        content = get_content(url)</div><div class="line">        <span class="keyword">print</span> (<span class="string">"开始创建图片存放目录并获取图片链接地址......"</span>)</div><div class="line">        <span class="keyword">if</span> os.path.exists(<span class="string">"./get/"</span>) == <span class="keyword">False</span>:</div><div class="line">            os.mkdir (<span class="string">"./get/"</span>)</div><div class="line">        <span class="keyword">if</span> os.path.exists(<span class="string">"./get/"</span>+str(pg)) == <span class="keyword">False</span>:</div><div class="line">            os.mkdir (<span class="string">"./get/"</span>+str(pg))</div><div class="line">        <span class="keyword">print</span> (<span class="string">"开始下载图片，本地存放目录为：./get/"</span>+str(pg))</div><div class="line">        time.sleep(<span class="number">3</span>)</div><div class="line">        get_img_url(content, str(pg))</div><div class="line">    </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line"><span class="comment">#主函数，一切的开端</span></div><div class="line">    content = get_content(url)</div><div class="line">    current_page = get_current_page(content)</div><div class="line">    get_html(current_page, int(Pg_count))</div><div class="line">    </div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    main()</div></pre></td></tr></table></figure>
+<p>下载过程截图：<br><img src="https://raw.githubusercontent.com/wjsaya/BlogPictures/master/jiandan_1.png" alt="jiandan_1"></p>
+<p>恩。。。效果图：<br><img src="https://raw.githubusercontent.com/wjsaya/BlogPictures/master/jiandan_2.png" alt="jiandan_2"></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。&lt;br&gt;github地址：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/&lt;/a&gt;&lt;br&gt;本次内容：从豆瓣的top250音乐界面爬取指定的topX专辑。&lt;br&gt;
+&lt;p&gt;最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。&lt;br&gt;github地址：&lt;a href=&quot;https://github.com/wjsaya/python_spider_learn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/wjsaya/python_spider_learn/&lt;/a&gt;&lt;br&gt;本次内容：从煎蛋网下载图片&lt;br&gt;
     
     </summary>
     

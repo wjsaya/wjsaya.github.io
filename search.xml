@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[[随笔一写]--test auto deploy]]></title>
+    <url>%2F%E6%9D%82%E8%B0%88%2Ftest.html</url>
+    <content type="text"><![CDATA[test auto deploy个人博客地址：https://www.wjsaya.topgithub地址：https://github.com 测试自动发布wjsaya &ensp; 2019/5/19 0:40 &ensp; 于 &ensp; 四川省成都市]]></content>
+      <categories>
+        <category>其他</category>
+        <category>随笔一写</category>
+      </categories>
+      <tags>
+        <tag>随笔一写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[[python每日一练]--0013:爬百度贴吧图片]]></title>
     <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0013.html</url>
     <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code代码github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily个人博客地址：https://wjsaya.github.io 第 0013 题： 用 Python 写一个爬图片的程序，爬 这个链接 里的日本妹子图片 :-) 思路： 加载帖子url 解析返回的网页结构，获取所有图片的id 根据图片id下载对应的预览图和大图 下载的预览图存放路径为./pic/XXX.jpg 大图路径为./picBig/XXX.jpg 代码：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#!/usr/bin/env python3# -*- coding: utf-8 -*- # @Author: wjsaya(http://www.wjsaya.top) # @Date: 2018-08-15 23:55:53 # @Last Modified by: wjsaya(http://www.wjsaya.top) # @Last Modified time: 2018-08-16 02:10:36 import osimport requestsfrom lxml import etreehead = &#123; "Host" : "tieba.baidu.com", "User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0", "Accept" : "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language" : "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2", "Accept-Encoding" : "gzip, deflate"&#125;def main(): '''主函數 \n 下载的帖子预览图在pic目录 \n 高清图在picBig目录 \n ''' createDir("pic") createDir("picBig") rsp = requests.get("http://tieba.baidu.com/p/2166231880?traceid=", headers=head).content.decode('utf-8') a = etree.HTML(rsp) rsp = a.xpath("//img[@class='BDE_Image']/@src") for url in rsp: get_pic(url) get_big_pic(url)def get_pic(url): '''下载预览图 ''' head['host'] = "imgsrc.baidu.com" fileName = "./pic/" + url.split("=")[1].split("/")[1] rsp = requests.get(url, headers=head).content with open (fileName, 'wb') as f: f.write(rsp)def get_big_pic(url): '''下载高清图 ''' head['host'] = "imgsrc.baidu.com" id = url.split("=")[1].split("/")[1][:-4] fileName = "./picBig/" + id + ".jpg" fileUrl = "http://imgsrc.baidu.com/forum/pic/item/" + id + ".jpg" rsp = requests.get(fileUrl, headers=head).content with open (fileName, 'wb') as f: f.write(rsp) print(fileName + "下载完毕") def createDir(dirName): '''传入目录 \n 目录不存在，创建之 \n 存在，删除其下所有文件 \n ''' if dirName not in os.listdir(): os.mkdir(dirName) else: for i in os.listdir(dirName): fileName = ".\\" + dirName + "\\" + i os.remove(fileName)if __name__ == '__main__': main() 效果图： 总结:&emsp;&emsp;爬虫自己写过一些了，这个题目的需求还是比较简单的。只是简单的获取一下网页上的图片而已，不需要解析网页加载过程。前段时间把贴吧的自动签到功能实现了，后续还实现了模拟手机app签到以获得双倍经验。有空了把那份代码整理整理发出来。。。]]></content>
@@ -62,18 +74,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[[随笔一写]--test auto deploy]]></title>
-    <url>%2F%E6%9D%82%E8%B0%88%2Ftest.html</url>
-    <content type="text"><![CDATA[test auto deploy个人博客地址：https://www.wjsaya.topgithub地址：https://github.com 测试自动发布wjsaya &ensp; 2019/5/19 0:40 &ensp; 于 &ensp; 四川省成都市]]></content>
-      <categories>
-        <category>其他</category>
-        <category>随笔一写</category>
-      </categories>
-      <tags>
-        <tag>随笔一写</tag>
       </tags>
   </entry>
   <entry>
@@ -166,9 +166,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[[python每日一练]--0005:把图片大小控制在iphone5的分辨率以下]]></title>
-    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0005.html</url>
-    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0005 题：你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。 思路 通过OS库的listdir列出所有图片； 然后通过PIL库的Image.open打开图片并获取图片大小； 最后进入一个死循环：通过PIL库的Image.resize来缩小图片为原图片的90%，直到图片大小小于iphone5的分辨率大小，退出循环。 代码123456789101112131415161718192021222324252627282930#coding: utf-8#Auther: wjsaya#**第 0005 题：**你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。import osfrom PIL import Imagedef image_small(dir1, dir2): list = os.listdir(dir1) for i in list: image = Image.open(dir1+'/'+i) while True: h,w = image.size #获取图片原始大小,然后进死循环，不停缩小图片为原来的90%，直到大小缩小为iphone5所支持的分辨率。 if h &lt; 1136: #iphone5分辨率为1136x640 if w &lt; 640: break image = image.resize((int(h*0.9),int(w*0.9))) image.save(dir2+'/'+i) print (dir1+'/'+i+"已处理，保存为："+dir2+'/'+i)if __name__ == "__main__": dir1 = input("缩小前图片存放目录为：") dir2 = input("缩小后图片存放目录为：") try: os.mkdir(dir2) except Exception: print (Exception) image_small(dir1, dir2) 效果图]]></content>
+    <title><![CDATA[[python每日一练]--0003:统计文档内的单词个数并存放到redis数据库]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0003.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0003 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到redis数据库 代码12345678910111213141516171819202122232425262728293031323334#coding: utf-8#**第 0003 题：**将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。#Auther: wjsayafrom random import choiceimport stringimport redisdef get_code(dict, length, count):#根据给定字典，长度来得出激活码 for i in range(1,int(count)+1): code = "" #通过count限制激活码个数，循环调用choice来计算激活码 for l in range(0,int(length)): code = code+str(choice(dict)) save_to_redis(count, code)def save_to_redis(max, value): #保存到redis数据库 redisdb = redis.Redis(host='10.2.2.131',port=6379,db=0) redisdb.lpush('active_code',value) redisdb.lrange('active_code',0,max) redisdb.save()if __name__ == "__main__": dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" get_code(dict, length, count) 效果图]]></content>
       <categories>
         <category>编程</category>
         <category>python</category>
@@ -179,9 +179,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[[python每日一练]--0003:统计文档内的单词个数并存放到redis数据库]]></title>
-    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0003.html</url>
-    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0003 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到redis数据库 代码12345678910111213141516171819202122232425262728293031323334#coding: utf-8#**第 0003 题：**将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。#Auther: wjsayafrom random import choiceimport stringimport redisdef get_code(dict, length, count):#根据给定字典，长度来得出激活码 for i in range(1,int(count)+1): code = "" #通过count限制激活码个数，循环调用choice来计算激活码 for l in range(0,int(length)): code = code+str(choice(dict)) save_to_redis(count, code)def save_to_redis(max, value): #保存到redis数据库 redisdb = redis.Redis(host='10.2.2.131',port=6379,db=0) redisdb.lpush('active_code',value) redisdb.lrange('active_code',0,max) redisdb.save()if __name__ == "__main__": dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" get_code(dict, length, count) 效果图]]></content>
+    <title><![CDATA[[python每日一练]--0005:把图片大小控制在iphone5的分辨率以下]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0005.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0005 题：你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。 思路 通过OS库的listdir列出所有图片； 然后通过PIL库的Image.open打开图片并获取图片大小； 最后进入一个死循环：通过PIL库的Image.resize来缩小图片为原图片的90%，直到图片大小小于iphone5的分辨率大小，退出循环。 代码123456789101112131415161718192021222324252627282930#coding: utf-8#Auther: wjsaya#**第 0005 题：**你有一个目录，装了很多照片，把它们的尺寸变成都不大于 iPhone5 分辨率的大小。import osfrom PIL import Imagedef image_small(dir1, dir2): list = os.listdir(dir1) for i in list: image = Image.open(dir1+'/'+i) while True: h,w = image.size #获取图片原始大小,然后进死循环，不停缩小图片为原来的90%，直到大小缩小为iphone5所支持的分辨率。 if h &lt; 1136: #iphone5分辨率为1136x640 if w &lt; 640: break image = image.resize((int(h*0.9),int(w*0.9))) image.save(dir2+'/'+i) print (dir1+'/'+i+"已处理，保存为："+dir2+'/'+i)if __name__ == "__main__": dir1 = input("缩小前图片存放目录为：") dir2 = input("缩小后图片存放目录为：") try: os.mkdir(dir2) except Exception: print (Exception) image_small(dir1, dir2) 效果图]]></content>
       <categories>
         <category>编程</category>
         <category>python</category>
@@ -218,19 +218,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[[python每日一练]--0000:图片添加数字]]></title>
-    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0000.html</url>
-    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0000 题：将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果 思路： PIL的Image.open打开图片。 获取图片大小。 调用ImageDraw，在图拍呢的指定位置写下数字。 代码：12345678910111213141516171819202122#coding: utf-8#Auther: wjsaya#**第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果from PIL import Image,ImageFont,ImageDrawdef main(): image = Image.open('./cat.jpg') #打开原图 wight, hight = image.size text = "233" color = (255,0,0) fontsize = wight//8 font = ImageFont.truetype("/usr/share/fonts/wps-office/arial.ttf",fontsize) #设定参数 draw = ImageDraw.Draw(image) draw.text((fontsize*6,0), text, color, font) image.save('./c.jpg', 'jpeg') #保存图片if __name__ == "__main__": main() 效果图：原图：]]></content>
-      <categories>
-        <category>编程</category>
-        <category>python</category>
-        <category>python每日一练</category>
-      </categories>
-      <tags>
-        <tag>python每日一练</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[[python每日一练]--0001:生成激活码]]></title>
     <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0001.html</url>
     <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）？ 思路 循环，在count条件内调用length的循环来生成key。 内循环，length条件下随机生成一个字符并追加到code变量。 得到一个key之后，保存到文件 代码1234567891011121314151617181920212223242526272829303132333435363738#coding: utf-8#第 0001 题：做为 Apple Store App 独立开发者，你要搞限时促销，为你的应用生成激活码（或者优惠券），使用 Python 如何生成 200 个激活码（或者优惠券）#Auther: wjsayafrom random import choiceimport stringimport osdef main(): if os.path.exists("./activecode.code"): print ("已经存在activecode.code文件，已经删除") os.remove("./activecode.code") dict = string.ascii_letters[:] #设定字典为'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' count = input("请输入激活码个数：") if count == "": count = "1" length = input("请输入激活码长度：") if length == "": length = "8" for i in range(0,int(count)): code = get_code(dict, length) with open ('activecode.code', 'a+') as f: f.write(code+'\n') #通过count限制激活码个数，循环调用get_code来计算激活码 def get_code(dict, length): #根据给定字典，长度来得出激活码 code = "" for i in range(0,int(length)): code = code+str(choice(dict)) return code if __name__ == "__main__": main() 效果图]]></content>
@@ -244,18 +231,31 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[[python爬虫]--爬取豆瓣音乐topX]]></title>
-    <url>%2F%E7%88%AC%E8%99%AB%2Fdouban_music.html</url>
-    <content type="text"><![CDATA[最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/本次内容：从豆瓣的top250音乐界面爬取指定的topX专辑。 思路： 拼接出豆瓣topX页面URL。 用BS去访问和解析豆瓣topX页面URL，获取页面内的所有歌手名和专辑名并拼接，然后输出。 代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#coding: utf-8import reimport requestsfrom bs4 import BeautifulSoupurl = "https://music.douban.com/top250?start=25"firefox=&#123;"User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0 FirePHP/0.7.4"&#125;def main():#主函数，一切的开始，以及变量值获取 maxm = input("想获取豆瓣排名前多少的音乐列表呢？(0-250之间）：") count_main = 0 url_li = get_pages() for i in range(0,9): if count_main &lt; int(maxm): count_main += get_details(url_li[i], count_main, maxm)def get_soup(url):#获取html并解析为BS html = requests.get(url, headers=firefox) soup = BeautifulSoup(html.content, 'lxml') return soupdef get_details(url, count_in_loop, maxm):#获取豆瓣音乐专辑的名称与url链接 content = get_soup(url) html = content.find_all('a', class_="nbg") for i in range(0,25): if count_in_loop &lt; int(maxm): print ("歌手-名字："+html[i]["title"]) print ("链接："+html[i]["href"]) count_in_loop += 1 return count_in_loopdef get_pages():#从豆瓣网页解析出豆瓣下方的下一页标签中的地址列表，此函数可升级为解析下一页url。#或者直接构造豆瓣url地址，?start=XXX即可。 content = get_soup(url) l = content.find("div", class_="paginator") url_li = [] for i in l.find_all('a'): url_li.append(i['href']) return url_li[0:9]if __name__ == '__main__': main() 效果图：]]></content>
+    <title><![CDATA[[python每日一练]--0000:图片添加数字]]></title>
+    <url>%2Fpython%E6%AF%8F%E6%97%A5%E4%B8%80%E7%BB%83%2F0000.html</url>
+    <content type="text"><![CDATA[题目链接：https://github.com/Show-Me-the-Code/show-me-the-code我的github链接：https://github.com/wjsaya/python_spider_learn/tree/master/python_daily第 0000 题：将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果 思路： PIL的Image.open打开图片。 获取图片大小。 调用ImageDraw，在图拍呢的指定位置写下数字。 代码：12345678910111213141516171819202122#coding: utf-8#Auther: wjsaya#**第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果from PIL import Image,ImageFont,ImageDrawdef main(): image = Image.open('./cat.jpg') #打开原图 wight, hight = image.size text = "233" color = (255,0,0) fontsize = wight//8 font = ImageFont.truetype("/usr/share/fonts/wps-office/arial.ttf",fontsize) #设定参数 draw = ImageDraw.Draw(image) draw.text((fontsize*6,0), text, color, font) image.save('./c.jpg', 'jpeg') #保存图片if __name__ == "__main__": main() 效果图：原图：]]></content>
+      <categories>
+        <category>编程</category>
+        <category>python</category>
+        <category>python每日一练</category>
+      </categories>
       <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
+        <tag>python每日一练</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[[python爬虫]--从煎蛋网下载图片]]></title>
     <url>%2F%E7%88%AC%E8%99%AB%2Fjiandan.html</url>
     <content type="text"><![CDATA[最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/本次内容：从煎蛋网下载图片 思路： 拼接出所需的页面URL。 用BS去访问和解析页面URL，获取页面内的所需图片并保存到本地并重命名。 代码：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677#coding: utf-8import timeimport reimport osimport requestsfrom bs4 import BeautifulSoupurl = 'http://jandan.net/ooxx'firefox = &#123;"User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0 FirePHP/0.7.4"&#125;Pg_count = input("请输入想要获取的页数(直接回车默认页码为1):")if Pg_count == "": Pg_count = "1"Pg_count=int(Pg_count)-1#给get_html函数使用，预先+1上去，这样-1就是当前第一页。def get_content(url):#获取url，返回BS解析之后的content html = requests.get(url, headers=firefox) content = BeautifulSoup(html.content, "lxml") return contentdef get_current_page(content):#获取url，返回url中的current-comment-page（即页码） page_swap1 = content.find('span',class_="current-comment-page") page_swap2 = str(page_swap1) current_page = page_swap2[36:39] #current_page = str(content.find('span',class_="current-comment-page"))[36:39] #此处本来是写成了一句语句直接提取，后来想了想，万一以后想再看下，这会把自己绕晕，于是乎拆分了、、、 return current_pagedef get_img_url(content, max_page):#获取解码后的html文件以及最大页码。获取html中的图片img_url，然后把img_url和最大页码传递给get_img函数。 #html = BeautifulSoup(content, "lxml") img_li = content.find_all("a", class_="view_img_link") for i in img_li: img_url = "http:"+i["href"] #img_url = "http://"+i["href"].strip("/") get_img(img_url, max_page) #strip,用来删除某字符 #并且加上http协议头 def get_img(img_url, floder):#获取img_url和文件夹名（即当前网页页码），通过img_url下载图片并保存在floder内。 img_name = img_url[28:] img_file = requests.get(img_url, headers=firefox) q = img_file.content with open ("./get/"+floder+"/"+img_name, 'wb') as img_file: img_file.write(q) print (floder+"/"+img_name+" is downloaded") def get_html(max_page, Pg_count):#获取最大页码数及想要下载图片的页数，循环得出每页的url地址。 #http://jandan.net/ooxx/page-107#comments while Pg_count &gt;= 0: pg = int(max_page)-Pg_count url = "http://jandan.net/ooxx/page-"+str(pg)+"#comments" print ("当前获取到的包含图片的页面url地址为："+url) Pg_count -= 1 content = get_content(url) print ("开始创建图片存放目录并获取图片链接地址......") if os.path.exists("./get/") == False: os.mkdir ("./get/") if os.path.exists("./get/"+str(pg)) == False: os.mkdir ("./get/"+str(pg)) print ("开始下载图片，本地存放目录为：./get/"+str(pg)) time.sleep(3) get_img_url(content, str(pg)) def main():#主函数，一切的开端 content = get_content(url) current_page = get_current_page(content) get_html(current_page, int(Pg_count)) if __name__ == '__main__': main() 下载过程截图： 恩。。。效果图：]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[[python爬虫]--爬取豆瓣音乐topX]]></title>
+    <url>%2F%E7%88%AC%E8%99%AB%2Fdouban_music.html</url>
+    <content type="text"><![CDATA[最近在学习python爬虫，写出来的一些爬虫记录在csdn博客里，同时备份一个放在了github上。github地址：https://github.com/wjsaya/python_spider_learn/本次内容：从豆瓣的top250音乐界面爬取指定的topX专辑。 思路： 拼接出豆瓣topX页面URL。 用BS去访问和解析豆瓣topX页面URL，获取页面内的所有歌手名和专辑名并拼接，然后输出。 代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#coding: utf-8import reimport requestsfrom bs4 import BeautifulSoupurl = "https://music.douban.com/top250?start=25"firefox=&#123;"User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0 FirePHP/0.7.4"&#125;def main():#主函数，一切的开始，以及变量值获取 maxm = input("想获取豆瓣排名前多少的音乐列表呢？(0-250之间）：") count_main = 0 url_li = get_pages() for i in range(0,9): if count_main &lt; int(maxm): count_main += get_details(url_li[i], count_main, maxm)def get_soup(url):#获取html并解析为BS html = requests.get(url, headers=firefox) soup = BeautifulSoup(html.content, 'lxml') return soupdef get_details(url, count_in_loop, maxm):#获取豆瓣音乐专辑的名称与url链接 content = get_soup(url) html = content.find_all('a', class_="nbg") for i in range(0,25): if count_in_loop &lt; int(maxm): print ("歌手-名字："+html[i]["title"]) print ("链接："+html[i]["href"]) count_in_loop += 1 return count_in_loopdef get_pages():#从豆瓣网页解析出豆瓣下方的下一页标签中的地址列表，此函数可升级为解析下一页url。#或者直接构造豆瓣url地址，?start=XXX即可。 content = get_soup(url) l = content.find("div", class_="paginator") url_li = [] for i in l.find_all('a'): url_li.append(i['href']) return url_li[0:9]if __name__ == '__main__': main() 效果图：]]></content>
       <tags>
         <tag>python</tag>
         <tag>爬虫</tag>
