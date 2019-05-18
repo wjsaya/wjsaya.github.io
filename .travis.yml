@@ -32,7 +32,7 @@ script:
 after_script:
     # script后执行
 #   - sed -i "s/AUTO_GH_TOKEN/${hexo_token}/g" ./_config.yml
-  - sed -i "s/repo:.*/$repo:\ ${CI_REPO}/g" ./_config.yml
+  - sed -i "s@repo:.*@repo:\ ${CI_REPO}@g" ./_config.yml
   - hexo deploy -g
   # 不手动执行，直接通过hexo deploy来调用_config.yml发布
 
