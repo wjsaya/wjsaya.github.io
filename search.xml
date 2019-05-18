@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[[随笔一写]--test auto deploy]]></title>
     <url>%2F%E6%9D%82%E8%B0%88%2Ftest.html</url>
-    <content type="text"><![CDATA[test auto deploy个人博客地址：https://www.wjsaya.topgithub地址：https://github.com 测试自动发布wjsaya &ensp; 2019/5/19 0:40 &ensp; 于 &ensp; 四川省成都市]]></content>
+    <content type="text"><![CDATA[test auto deploy个人博客地址：https://www.wjsaya.topgithub地址：https://github.com 测试自动发布，测试TravisCI测试TravisCI测试TravisCIwjsaya &ensp; 2019/5/19 0:40 &ensp; 于 &ensp; 四川省成都市]]></content>
       <categories>
         <category>其他</category>
         <category>随笔一写</category>
