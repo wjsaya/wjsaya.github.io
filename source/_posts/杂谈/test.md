@@ -1,6 +1,6 @@
 ---
 title: '[随笔一写]--test auto deploy' 
-date: 2018-07-14
+date: 2019-05-19
 tags: [随笔一写]
 categories: [其他,随笔一写]
 ---
