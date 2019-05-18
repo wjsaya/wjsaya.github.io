@@ -7,7 +7,7 @@ categories: [其他,随笔一写]
 
 >记在川师的第二年前
 个人博客地址：https://www.wjsaya.top
-github地址：https://github.com/wjsaya/python_spider_learn/
+github地址：https://github.com/wjsaya/
 <!--more-->
 
 
